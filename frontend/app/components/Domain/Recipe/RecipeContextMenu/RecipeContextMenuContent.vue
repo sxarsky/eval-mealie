@@ -9,7 +9,7 @@
     can-confirm
     @confirm="deleteRecipe()"
   >
-    <v-card-text>
+    <v-card-text data-testid="recipe-delete-confirm">
       <template v-if="isAdminAndNotOwner">
         {{ $t("recipe.admin-delete-confirmation") }}
       </template>
