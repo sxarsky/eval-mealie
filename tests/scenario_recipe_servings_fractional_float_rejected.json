@@ -1,0 +1,86 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"recipe-float-servings-test\"}",
+    "ResponseBody": "{\"slug\": \"recipe-float-servings-test\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:06.680Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_servings_fractional_float_rejected",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"recipe-float-servings-test\", \"name\": \"recipe-float-servings-test\", \"recipeServings\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/recipe-float-servings-test",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:07.680Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_servings_fractional_float_rejected"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"recipe-float-servings-test\", \"slug\": \"recipe-float-servings-test\", \"recipeServings\": 2.5}",
+    "ResponseBody": "{\"detail\": [{\"type\": \"int_parsing\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/recipes/recipe-float-servings-test",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:08.680Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_servings_fractional_float_rejected"
+  }
+]

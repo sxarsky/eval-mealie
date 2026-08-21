@@ -8,7 +8,7 @@ from mealie.schema.recipe import RecipeSummary
 SHOULD_ERROR = "this_test_should_error"
 
 
-@pytest.mark.parametrize("field", ["recipe_servings", "recipe_yield_quantity"])
+@pytest.mark.parametrize("field", ["recipe_yield_quantity"])
 @pytest.mark.parametrize(
     ["val", "expected"],
     [
@@ -38,6 +38,38 @@ def test_recipe_number_sanitation(field: str, val: Any, expected: Any):
 
     assert expected != SHOULD_ERROR, "Value should have errored"
     assert getattr(recipe, field) == expected
+
+
+@pytest.mark.parametrize(
+    ["val", "expected"],
+    [
+        (0, 0),
+        (None, 0),
+        ("", 0),
+        (10, 10),
+        (2.25, SHOULD_ERROR),
+        ("10", 10),
+        ("invalid", SHOULD_ERROR),
+    ],
+)
+def test_recipe_servings_sanitation(val: Any, expected: Any):
+    # recipe_servings is int; fractional floats must be rejected
+    try:
+        recipe = RecipeSummary(
+            id=uuid4(),
+            user_id=uuid4(),
+            household_id=uuid4(),
+            group_id=uuid4(),
+            recipe_servings=val,
+        )
+    except ValueError:
+        if expected == SHOULD_ERROR:
+            return
+        else:
+            raise
+
+    assert expected != SHOULD_ERROR, "Value should have errored"
+    assert recipe.recipe_servings == expected
 
 
 @pytest.mark.parametrize("field", ["recipe_yield", "total_time", "prep_time", "cook_time", "perform_time"])
