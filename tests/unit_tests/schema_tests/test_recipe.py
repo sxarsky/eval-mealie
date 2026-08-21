@@ -63,6 +63,38 @@ def test_recipe_string_sanitation(field: str, val: Any, expected: Any):
     assert getattr(recipe, field) == expected
 
 
+def test_recipe_time_fields_count():
+    recipe_all_none = RecipeSummary(
+        id=uuid4(),
+        user_id=uuid4(),
+        household_id=uuid4(),
+        group_id=uuid4(),
+    )
+    assert recipe_all_none.time_fields_count == 0
+
+    recipe_two_set = RecipeSummary(
+        id=uuid4(),
+        user_id=uuid4(),
+        household_id=uuid4(),
+        group_id=uuid4(),
+        prep_time="PT15M",
+        cook_time="PT30M",
+    )
+    assert recipe_two_set.time_fields_count == 2
+
+    recipe_all_set = RecipeSummary(
+        id=uuid4(),
+        user_id=uuid4(),
+        household_id=uuid4(),
+        group_id=uuid4(),
+        prep_time="PT15M",
+        cook_time="PT30M",
+        perform_time="PT5M",
+        total_time="PT50M",
+    )
+    assert recipe_all_set.time_fields_count == 4
+
+
 def test_recipe_preserves_existing_slug():
     recipe = RecipeSummary(
         id=uuid4(),
