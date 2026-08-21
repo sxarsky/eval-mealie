@@ -19,6 +19,8 @@ SHOULD_ERROR = "this_test_should_error"
         (2.25, 2.25),
         ("10", 10),
         ("invalid", SHOULD_ERROR),
+        (-1, SHOULD_ERROR),
+        (-0.5, SHOULD_ERROR),
     ],
 )
 def test_recipe_number_sanitation(field: str, val: Any, expected: Any):
