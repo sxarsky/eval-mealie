@@ -19,20 +19,9 @@ from mealie.schema._mealie.mealie_model import UpdatedAtField
 from mealie.schema._mealie.types import NoneFloat
 from mealie.schema.recipe.recipe import Recipe
 from mealie.schema.response.pagination import PaginationBase
+from mealie.utils.formatting import INGREDIENT_QTY_PRECISION, SUBSCRIPT, SUPERSCRIPT, display_fraction
 
-INGREDIENT_QTY_PRECISION = 3
 MAX_INGREDIENT_DENOMINATOR = 32
-
-SUPERSCRIPT = dict(zip("1234567890", "¹²³⁴⁵⁶⁷⁸⁹⁰", strict=False))
-SUBSCRIPT = dict(zip("1234567890", "₁₂₃₄₅₆₇₈₉₀", strict=False))
-
-
-def display_fraction(fraction: Fraction):
-    return (
-        "".join([SUPERSCRIPT[c] for c in str(fraction.numerator)])
-        + "/"
-        + "".join([SUBSCRIPT[c] for c in str(fraction.denominator)])
-    )
 
 
 class StandardizedUnitType(StrEnum):
