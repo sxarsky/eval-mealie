@@ -1,0 +1,24 @@
+# Skyramp Workspace Configuration for Mealie eval.
+# Copied into the cloned repo before the agent runs. Mirrors mealie-testb's workspace,
+# adjusted for eval: schemaPath uses the live OpenAPI endpoint; Docker handles the runtime.
+workspace:
+  repoName: mealie-recipes/mealie
+  repoUrl: https://github.com/mealie-recipes/mealie.git
+metadata:
+  schemaVersion: v1
+  mcpVersion: latest
+  executorVersion: v1.0.0
+  createdAt: "2026-06-13T00:00:00.000Z"
+  updatedAt: "2026-06-13T00:00:00.000Z"
+services:
+  - serviceName: mealie-api-backend
+    language: python
+    framework: pytest
+    testDirectory: tests
+    api:
+      baseUrl: http://localhost:9000
+      schemaPath: http://localhost:9000/openapi.json
+      authHeader: Authorization
+      authType: bearer
+    runtimeDetails:
+      runtime: local

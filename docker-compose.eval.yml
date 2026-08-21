@@ -1,0 +1,16 @@
+# Mealie eval stack. Built from source (docker/Dockerfile, target: production); SQLite — no separate DB service.
+# No healthcheck — get-auth-token.sh polls /api/app/about with retries before fetching a bearer token.
+services:
+  mealie:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: production
+    ports:
+      - "9000:9000"
+    environment:
+      BASE_URL: http://localhost:9000
+      ALLOW_SIGNUP: 'false'
+      DEFAULT_EMAIL: changeme@example.com
+      DEFAULT_PASSWORD: MyPassword
+      DB_ENGINE: sqlite
