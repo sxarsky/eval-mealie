@@ -1,0 +1,63 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"test-recipe-no-category\"}",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:09.103Z",
+    "Scheme": "http",
+    "scenarioName": "recipes-categories-only-filter-validation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"items\": [], \"total\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:10.103Z",
+    "Scheme": "http",
+    "scenarioName": "recipes-categories-only-filter-validation"
+  }
+]

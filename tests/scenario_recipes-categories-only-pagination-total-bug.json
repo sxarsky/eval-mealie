@@ -1,0 +1,96 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"recipe-no-cat-1\"}",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:06.388Z",
+    "Scheme": "http",
+    "scenarioName": "recipes-categories-only-pagination-total-bug",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"recipe-no-cat-2\"}",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:07.388Z",
+    "Scheme": "http",
+    "scenarioName": "recipes-categories-only-pagination-total-bug",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"items\": [], \"total\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ],
+      "perPage": [
+        "1"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-21T23:45:08.388Z",
+    "Scheme": "http",
+    "scenarioName": "recipes-categories-only-pagination-total-bug"
+  }
+]
