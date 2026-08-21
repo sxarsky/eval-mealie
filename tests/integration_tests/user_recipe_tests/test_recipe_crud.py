@@ -1691,6 +1691,27 @@ def test_create_recipe_slug_not_empty(api_client: TestClient, unique_user: TestU
     assert response.status_code == 400
 
 
+def test_create_recipe_with_negative_servings(api_client: TestClient, unique_user: TestUser):
+    """Negative recipe_servings and recipe_yield_quantity must be rejected with 422."""
+    slug = random_string()
+    response = api_client.post(api_routes.recipes, json={"name": slug}, headers=unique_user.token)
+    assert response.status_code == 201
+    created_slug = json.loads(response.text)
+
+    recipe_data = api_client.get(api_routes.recipes_slug(created_slug), headers=unique_user.token).json()
+
+    recipe_data["recipe_servings"] = -1
+    response = api_client.put(api_routes.recipes_slug(created_slug), json=recipe_data, headers=unique_user.token)
+    assert response.status_code == 422
+
+    recipe_data["recipe_servings"] = 4
+    recipe_data["recipe_yield_quantity"] = -0.5
+    response = api_client.put(api_routes.recipes_slug(created_slug), json=recipe_data, headers=unique_user.token)
+    assert response.status_code == 422
+
+    api_client.delete(api_routes.recipes_slug(created_slug), headers=unique_user.token)
+
+
 def test_create_recipe_slug_length_validation(api_client: TestClient, unique_user: TestUser):
     """Test that recipe slugs are properly truncated to a reasonable length."""
     very_long_name = "A" * 500  # 500 character name
