@@ -348,6 +348,7 @@ class RecipeController(BaseRecipeController):
         tools: list[UUID4 | str] | None = Query(None),
         foods: list[UUID4 | str] | None = Query(None),
         households: list[UUID4 | str] | None = Query(None),
+        categories_only: bool = Query(False, description="When true, return only recipes that have at least one category"),
     ):
         cookbook_data: ReadCookBook | None = None
         if search_query.cookbook:
@@ -381,6 +382,13 @@ class RecipeController(BaseRecipeController):
             require_all_foods=search_query.require_all_foods,
             search=search_query.search,
         )
+
+        # When categories_only=true, keep only recipes that have at least one category assigned.
+        if categories_only:
+            pagination_response.items = [
+                item for item in pagination_response.items if item.recipe_category
+            ]
+            pagination_response.total = len(pagination_response.items)
 
         # merge default pagination with the request's query params
         query_params = q.model_dump() | {**request.query_params}
