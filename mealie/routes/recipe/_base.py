@@ -20,7 +20,11 @@ from mealie.services.recipe.recipe_service import RecipeService
 class JSONBytes(JSONResponse):
     """
     JSONBytes overrides the render method to return the bytes instead of a string.
-    You can use this when you want to use orjson and bypass the jsonable_encoder
+    You can use this when you want to use orjson and bypass the jsonable_encoder.
+
+    This avoids double-serialization: the content is already a JSON-encoded bytes
+    object produced by orjson, so we skip FastAPI's normal jsonable_encoder step
+    and return the raw bytes directly to the client.
     """
 
     media_type = "application/json"
