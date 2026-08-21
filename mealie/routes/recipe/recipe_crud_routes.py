@@ -42,7 +42,6 @@ from mealie.schema.recipe.recipe import (
 )
 from mealie.schema.recipe.recipe_asset import RecipeAsset
 from mealie.schema.recipe.recipe_scraper import ScrapeRecipeTest
-from mealie.schema.recipe.recipe_suggestion import RecipeSuggestionQuery, RecipeSuggestionResponse
 from mealie.schema.recipe.request_helpers import (
     RecipeDuplicate,
     UpdateImageResponse,
@@ -390,24 +389,6 @@ class RecipeController(BaseRecipeController):
         )
 
         json_compatible_response = orjson.dumps(pagination_response.model_dump(by_alias=True))
-
-        # Response is returned directly, to avoid validation and improve performance
-        return JSONBytes(content=json_compatible_response)
-
-    @router.get("/suggestions", response_model=RecipeSuggestionResponse)
-    def suggest_recipes(
-        self,
-        q: RecipeSuggestionQuery = Depends(make_dependable(RecipeSuggestionQuery)),
-        foods: list[UUID4] | None = Query(None),
-        tools: list[UUID4] | None = Query(None),
-    ) -> RecipeSuggestionResponse:
-        group_recipes_by_user = get_repositories(
-            self.session, group_id=self.group_id, household_id=None
-        ).recipes.by_user(self.user.id)
-
-        recipes = group_recipes_by_user.find_suggested_recipes(q, foods, tools)
-        response = RecipeSuggestionResponse(items=recipes)
-        json_compatible_response = orjson.dumps(response.model_dump(by_alias=True))
 
         # Response is returned directly, to avoid validation and improve performance
         return JSONBytes(content=json_compatible_response)
