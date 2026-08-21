@@ -152,6 +152,12 @@ class RecipeSummary(MealieModel):
     def clean_numbers(val: Any):
         return val or 0
 
+    @field_validator("recipe_servings", "recipe_yield_quantity", mode="after")
+    def reject_negative_quantities(val: float) -> float:
+        if val < 0:
+            raise ValueError("recipe_servings and recipe_yield_quantity must be non-negative")
+        return val
+
     @field_validator("recipe_yield", "total_time", "prep_time", "cook_time", "perform_time", mode="before")
     def clean_strings(val: Any):
         if val is None:
