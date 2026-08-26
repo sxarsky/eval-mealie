@@ -1,0 +1,180 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp-cat-total\"}",
+    "ResponseBody": "{\"id\": \"3f2a9c14-5b7e-4d61-9a08-2c6b8e4f1d73\", \"name\": \"skyramp-cat-total\", \"slug\": \"skyramp-cat-total\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:28.000Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_total_integrity",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Cat Total One\"}",
+    "ResponseBody": "\"skyramp-cat-total-one\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:29.000Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_total_integrity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeCategory\": [{\"id\": \"3f2a9c14-5b7e-4d61-9a08-2c6b8e4f1d73\", \"name\": \"skyramp-cat-total\", \"slug\": \"skyramp-cat-total\"}]}",
+    "ResponseBody": "{\"slug\": \"skyramp-cat-total-one\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-cat-total-one",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:30.000Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_total_integrity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Cat Total Two\"}",
+    "ResponseBody": "\"skyramp-cat-total-two\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:31.000Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_total_integrity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeCategory\": [{\"id\": \"3f2a9c14-5b7e-4d61-9a08-2c6b8e4f1d73\", \"name\": \"skyramp-cat-total\", \"slug\": \"skyramp-cat-total\"}]}",
+    "ResponseBody": "{\"slug\": \"skyramp-cat-total-two\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-cat-total-two",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:32.000Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_total_integrity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 1, \"total\": 2, \"total_pages\": 2}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories": [
+        "3f2a9c14-5b7e-4d61-9a08-2c6b8e4f1d73"
+      ],
+      "categories_only": [
+        "true"
+      ],
+      "perPage": [
+        "1"
+      ],
+      "page": [
+        "1"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:33.000Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_total_integrity"
+  }
+]
