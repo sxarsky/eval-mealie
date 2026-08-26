@@ -74,3 +74,33 @@ def test_recipe_preserves_existing_slug():
     )
 
     assert recipe.slug == "nourish-bowls-zuppa-copycat"
+
+
+@pytest.mark.parametrize(
+    ["time_fields", "expected"],
+    [
+        ({}, 0),
+        ({"prep_time": "15 minutes"}, 1),
+        ({"prep_time": "15 minutes", "cook_time": "30 minutes"}, 2),
+        (
+            {
+                "prep_time": "15 minutes",
+                "cook_time": "30 minutes",
+                "perform_time": "5 minutes",
+                "total_time": "50 minutes",
+            },
+            4,
+        ),
+    ],
+)
+def test_recipe_time_fields_count(time_fields: dict[str, Any], expected: int):
+    recipe = RecipeSummary(
+        id=uuid4(),
+        user_id=uuid4(),
+        household_id=uuid4(),
+        group_id=uuid4(),
+        **time_fields,
+    )
+
+    assert recipe.time_fields_count == expected
+    assert recipe.model_dump(by_alias=True)["timeFieldsCount"] == expected

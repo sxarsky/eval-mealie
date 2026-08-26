@@ -1,0 +1,113 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"tfc-blank-time-guard\"}",
+    "ResponseBody": "\"tfc-blank-time-guard\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:43.526Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_blank_time_not_counted",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"prepTime\": \"15 minutes\", \"cookTime\": \"30 minutes\"}",
+    "ResponseBody": "{\"slug\": \"tfc-blank-time-guard\", \"prepTime\": \"15 minutes\", \"cookTime\": \"30 minutes\", \"performTime\": null, \"totalTime\": null, \"timeFieldsCount\": 2}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/tfc-blank-time-guard",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:44.526Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_blank_time_not_counted"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"performTime\": \"\"}",
+    "ResponseBody": "{\"slug\": \"tfc-blank-time-guard\", \"prepTime\": \"15 minutes\", \"cookTime\": \"30 minutes\", \"performTime\": \"\", \"totalTime\": null, \"timeFieldsCount\": 2}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/tfc-blank-time-guard",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:45.526Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_blank_time_not_counted"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/tfc-blank-time-guard",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:46.526Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_blank_time_not_counted"
+  }
+]
