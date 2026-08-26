@@ -1,0 +1,113 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Stats Recipe\"}",
+    "ResponseBody": "\"skyramp-stats-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:15:53.718Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-stats-recompute-after-ingredient-update",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"ingredientCount\": 1, \"instructionCount\": 1, \"toolCount\": 0, \"tagCount\": 0, \"categoryCount\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-stats-recipe/stats",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:15:54.718Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-stats-recompute-after-ingredient-update"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeIngredient\": [{\"note\": \"1 cup flour\"}, {\"note\": \"2 eggs\"}, {\"note\": \"3 tbsp sugar\"}], \"recipeInstructions\": [{\"text\": \"Mix the dry ingredients\"}, {\"text\": \"Bake for 30 minutes\"}]}",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-stats-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:15:55.718Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-stats-recompute-after-ingredient-update"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"ingredientCount\": 3, \"instructionCount\": 2, \"toolCount\": 0, \"tagCount\": 0, \"categoryCount\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-stats-recipe/stats",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:15:56.718Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-stats-recompute-after-ingredient-update"
+  }
+]
