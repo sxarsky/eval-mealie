@@ -1,0 +1,137 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Bulk Del Stats Recipe One\"}",
+    "ResponseBody": "\"skyramp-bulk-del-stats-recipe-one\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:52.725Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_after_bulk_delete"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Bulk Del Stats Recipe Two\"}",
+    "ResponseBody": "\"skyramp-bulk-del-stats-recipe-two\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:53.725Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_after_bulk_delete"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 2, \"by_category\": {}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/statistics",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:54.725Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_after_bulk_delete"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipes\": [\"skyramp-bulk-del-stats-recipe-one\", \"skyramp-bulk-del-stats-recipe-two\"]}",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes/bulk-actions/delete",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:55.725Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_after_bulk_delete"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 0, \"by_category\": {}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/statistics",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:56.725Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_after_bulk_delete"
+  }
+]
