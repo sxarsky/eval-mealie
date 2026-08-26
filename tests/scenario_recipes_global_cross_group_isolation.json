@@ -1,0 +1,147 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Isolation Group B\"}",
+    "ResponseBody": "{\"id\": \"2a7d5e91-64c3-4b18-8f0a-13e5c7b9d426\", \"name\": \"Isolation Group B\", \"slug\": \"isolation-group-b\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/groups",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:24.920Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"username\": \"isolationuserb\", \"fullName\": \"Isolation User B\", \"email\": \"isolationuserb@example.com\", \"password\": \"IsolationPassw0rd!\", \"group\": \"Isolation Group B\", \"admin\": false}",
+    "ResponseBody": "{\"id\": \"c58e30a7-91b4-4d62-a7f3-06be21c48d95\", \"email\": \"isolationuserb@example.com\", \"groupId\": \"2a7d5e91-64c3-4b18-8f0a-13e5c7b9d426\", \"admin\": false}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:25.920Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation",
+    "UniqueFields": [
+      "username",
+      "email"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Group A Private Recipe\"}",
+    "ResponseBody": "\"group-a-private-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:26.920Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"9f4b1c27-3d8e-4a61-b052-7c6e94af1d38\", \"slug\": \"group-a-private-recipe\", \"name\": \"Group A Private Recipe\", \"groupId\": \"e7c0214b-11bb-4f00-9fcd-ad90cccdc166\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/group-a-private-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:27.920Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/9f4b1c27-3d8e-4a61-b052-7c6e94af1d38",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:28.920Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  }
+]

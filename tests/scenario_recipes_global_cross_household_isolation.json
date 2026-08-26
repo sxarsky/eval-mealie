@@ -1,0 +1,174 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"e18bc2c1-9542-4669-838d-e45658d35366\", \"groupId\": \"3b81d7c4-52a9-4e07-9d16-8fa4c2b0e753\", \"group\": \"Home\", \"householdId\": \"5c92e8a0-1f4b-4d33-ab27-60d9f3c81e45\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/users/self",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:43.409Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_household_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Household Two\", \"groupId\": \"3b81d7c4-52a9-4e07-9d16-8fa4c2b0e753\"}",
+    "ResponseBody": "{\"id\": \"7d3f6a15-8c02-4b9e-91d5-24e7b6f0a938\", \"name\": \"Household Two\", \"slug\": \"household-two\", \"groupId\": \"3b81d7c4-52a9-4e07-9d16-8fa4c2b0e753\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/households",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:44.409Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_household_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"username\": \"householdtwouser\", \"fullName\": \"Household Two User\", \"email\": \"householdtwouser@example.com\", \"password\": \"HouseholdPassw0rd!\", \"group\": \"Home\", \"household\": \"Household Two\", \"admin\": false}",
+    "ResponseBody": "{\"id\": \"a417cb69-3e58-4f21-8b74-c05d9e2a6317\", \"email\": \"householdtwouser@example.com\", \"householdId\": \"7d3f6a15-8c02-4b9e-91d5-24e7b6f0a938\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:45.409Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_household_isolation",
+    "UniqueFields": [
+      "username",
+      "email"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Household One Recipe\"}",
+    "ResponseBody": "\"household-one-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:46.409Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_household_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"1e6c04b8-95d7-42fa-83c1-b70f5a2d9e64\", \"slug\": \"household-one-recipe\", \"name\": \"Household One Recipe\", \"householdId\": \"5c92e8a0-1f4b-4d33-ab27-60d9f3c81e45\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/household-one-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:47.409Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_household_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/1e6c04b8-95d7-42fa-83c1-b70f5a2d9e64",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:56:48.409Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_household_isolation"
+  }
+]
