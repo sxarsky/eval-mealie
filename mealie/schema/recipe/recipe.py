@@ -113,6 +113,16 @@ class CreateRecipe(MealieModel):
     name: str
 
 
+class RecipeStats(MealieModel):
+    """Computed counts summarizing a recipe's contents."""
+
+    ingredient_count: int
+    instruction_count: int
+    tool_count: int
+    tag_count: int
+    category_count: int
+
+
 class RecipeSummary(MealieModel):
     id: UUID4 | None = None
     _normalize_search: ClassVar[bool] = True
