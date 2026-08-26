@@ -1,0 +1,141 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\":\"Skyramp Scale Persistence Check\"}",
+    "ResponseBody": "\"skyramp-scale-persistence-check\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:02:07.719Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_scale_does_not_persist"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\":4,\"recipeYieldQuantity\":2,\"recipeYield\":\"loaves\",\"recipeIngredient\":[{\"quantity\":1.5,\"note\":\"flour\",\"display\":\"\"}]}",
+    "ResponseBody": "{\"slug\":\"skyramp-scale-persistence-check\",\"recipeServings\":4.0,\"recipeYieldQuantity\":2.0,\"recipeYield\":\"loaves\",\"recipeIngredient\":[{\"quantity\":1.5,\"note\":\"flour\",\"display\":\"1 ¹/₂ flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-scale-persistence-check",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:02:08.719Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_scale_does_not_persist"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\":\"skyramp-scale-persistence-check\",\"recipeServings\":12.0,\"recipeYieldQuantity\":6.0,\"recipeIngredient\":[{\"quantity\":4.5,\"note\":\"flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-persistence-check/scale",
+    "QueryParams": {
+      "scale": [
+        "3"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:02:09.719Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_scale_does_not_persist"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\":\"skyramp-scale-persistence-check\",\"recipeServings\":4.0,\"recipeYieldQuantity\":2.0,\"recipeIngredient\":[{\"quantity\":1.5,\"note\":\"flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-persistence-check",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:02:10.719Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_scale_does_not_persist"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-scale-persistence-check",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T19:02:11.719Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_scale_does_not_persist"
+  }
+]
