@@ -1,0 +1,143 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"tfc-duplicate-source\"}",
+    "ResponseBody": "\"tfc-duplicate-source\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:55.331Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_duplicate_carries_derived_time_fields_count",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"prepTime\": \"10 minutes\", \"cookTime\": \"20 minutes\", \"totalTime\": \"30 minutes\"}",
+    "ResponseBody": "{\"slug\": \"tfc-duplicate-source\", \"prepTime\": \"10 minutes\", \"cookTime\": \"20 minutes\", \"totalTime\": \"30 minutes\", \"performTime\": null, \"timeFieldsCount\": 3}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/tfc-duplicate-source",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:56.331Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_duplicate_carries_derived_time_fields_count"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"tfc-duplicate-copy\"}",
+    "ResponseBody": "{\"name\": \"tfc-duplicate-copy\", \"slug\": \"tfc-duplicate-copy\", \"prepTime\": \"10 minutes\", \"cookTime\": \"20 minutes\", \"totalTime\": \"30 minutes\", \"performTime\": null, \"timeFieldsCount\": 3}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes/tfc-duplicate-source/duplicate",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:57.331Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_duplicate_carries_derived_time_fields_count",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/tfc-duplicate-copy",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:58.331Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_duplicate_carries_derived_time_fields_count"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/tfc-duplicate-source",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-26T18:53:59.331Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_duplicate_carries_derived_time_fields_count"
+  }
+]

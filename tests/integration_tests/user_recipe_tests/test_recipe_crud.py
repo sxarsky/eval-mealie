@@ -595,6 +595,11 @@ def test_read_update(
 
     assert recipe["notes"] == test_notes
 
+    # `timeFieldsCount` is derived from the four time fields (RecipeSummary.time_fields_count)
+    assert recipe["timeFieldsCount"] == sum(
+        1 for key in ("prepTime", "cookTime", "performTime", "totalTime") if recipe.get(key) is not None
+    )
+
     assert len(recipe["recipeCategory"]) == len(recipe_categories)
 
     test_name = [x.name for x in recipe_categories]
