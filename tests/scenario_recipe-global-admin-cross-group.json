@@ -1,0 +1,86 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Admin Test Recipe\"}",
+    "ResponseBody": "{\"id\": \"c6d3b8e2-4f9a-5b01-c2d3-e4f5a6b7c8d9\", \"slug\": \"admin-test-recipe\", \"name\": \"Admin Test Recipe\", \"groupId\": \"uuid\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T03:46:45.396Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-admin-cross-group",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"c6d3b8e2-4f9a-5b01-c2d3-e4f5a6b7c8d9\", \"name\": \"Admin Test Recipe\", \"groupId\": \"uuid\", \"slug\": \"admin-test-recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/c6d3b8e2-4f9a-5b01-c2d3-e4f5a6b7c8d9",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T03:46:46.396Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-admin-cross-group"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/admin-test-recipe",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T03:46:47.396Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-admin-cross-group"
+  }
+]
