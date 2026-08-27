@@ -601,6 +601,8 @@ def test_read_update(
     for cats in zip(recipe["recipeCategory"], recipe_categories, strict=False):
         assert cats[0]["name"] in test_name
 
+    assert recipe["timeFieldsCount"] == 0
+
 
 @pytest.mark.parametrize("use_patch", [True, False])
 def test_update_many(api_client: TestClient, unique_user: TestUser, use_patch: bool):
@@ -1586,6 +1588,8 @@ def test_get_recipes_organizer_filter(api_client: TestClient, unique_user: utils
     assert len(response_json["items"]) == len(expected_recipe_ids)
     fetched_recipes_ids = [recipe["id"] for recipe in response_json["items"]]
     assert set(fetched_recipes_ids) == expected_recipe_ids
+    for item in response_json["items"]:
+        assert item["timeFieldsCount"] == 0
 
 
 def test_get_random_order(api_client: TestClient, unique_user: utils.TestUser):
