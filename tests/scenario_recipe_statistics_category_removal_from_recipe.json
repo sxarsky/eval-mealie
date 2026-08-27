@@ -1,0 +1,224 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"SkyrampRemovalCat\"}",
+    "ResponseBody": "{\"name\": \"SkyrampRemovalCat\", \"id\": \"90aa6b07-3771-4c02-b2d7-2a3846c5e9ab\", \"groupId\": \"5ba0c679-2419-4253-b357-80bab6edf390\", \"slug\": \"skyrampremovalcat\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:48.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Removal Recipe\"}",
+    "ResponseBody": "\"skyramp-removal-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:49.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Removal Recipe\", \"slug\": \"skyramp-removal-recipe\", \"recipeCategory\": [{\"id\": \"90aa6b07-3771-4c02-b2d7-2a3846c5e9ab\", \"name\": \"SkyrampRemovalCat\", \"slug\": \"skyrampremovalcat\", \"groupId\": \"5ba0c679-2419-4253-b357-80bab6edf390\"}]}",
+    "ResponseBody": "{\"name\": \"Skyramp Removal Recipe\", \"slug\": \"skyramp-removal-recipe\", \"recipeCategory\": [{\"id\": \"90aa6b07-3771-4c02-b2d7-2a3846c5e9ab\", \"groupId\": \"5ba0c679-2419-4253-b357-80bab6edf390\", \"name\": \"SkyrampRemovalCat\", \"slug\": \"skyrampremovalcat\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-removal-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:50.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 1, \"by_category\": {\"SkyrampRemovalCat\": 1}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/statistics",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:51.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Removal Recipe\", \"slug\": \"skyramp-removal-recipe\", \"recipeCategory\": []}",
+    "ResponseBody": "{\"name\": \"Skyramp Removal Recipe\", \"slug\": \"skyramp-removal-recipe\", \"recipeCategory\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-removal-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:52.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 1, \"by_category\": {}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/statistics",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:53.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-removal-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:54.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/organizers/categories/90aa6b07-3771-4c02-b2d7-2a3846c5e9ab",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:55.377Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_category_removal_from_recipe"
+  }
+]
