@@ -38,6 +38,7 @@ from mealie.schema.recipe.recipe import (
     CreateRecipe,
     CreateRecipeByUrlBulk,
     RecipeLastMade,
+    RecipeStatistics,
     RecipeSummary,
 )
 from mealie.schema.recipe.recipe_asset import RecipeAsset
@@ -411,6 +412,18 @@ class RecipeController(BaseRecipeController):
 
         # Response is returned directly, to avoid validation and improve performance
         return JSONBytes(content=json_compatible_response)
+
+    @router.get("/statistics", response_model=RecipeStatistics)
+    def get_statistics(self) -> RecipeStatistics:
+        """Returns total recipe count and a breakdown by category for the current user's group."""
+        all_recipes = self.group_recipes.by_user(self.user.id).get_all()
+        total = len(all_recipes)
+        by_category: dict[str, int] = {}
+        for recipe in all_recipes:
+            if recipe.recipe_category:
+                for cat in recipe.recipe_category:
+                    by_category[cat.name] = by_category.get(cat.name, 0) + 1
+        return RecipeStatistics(total=total, by_category=by_category)
 
     @router.get("/{slug}", response_model=Recipe)
     def get_one(self, slug: str = Path(..., description="A recipe's slug or id")):
