@@ -1,0 +1,123 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Global Delete Probe Recipe\"}",
+    "ResponseBody": "\"global-delete-probe-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:47.766Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_deleted_recipe_not_readable",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 1, \"items\": [{\"id\": \"98564d6a-f793-4073-a73f-492c863526a6\", \"slug\": \"global-delete-probe-recipe\", \"name\": \"Global Delete Probe Recipe\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "orderBy": [
+        "createdAt"
+      ],
+      "orderDirection": [
+        "desc"
+      ],
+      "perPage": [
+        "1"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:48.766Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_deleted_recipe_not_readable"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/global-delete-probe-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:49.766Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_deleted_recipe_not_readable"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true, \"exception\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/98564d6a-f793-4073-a73f-492c863526a6",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:50.766Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_deleted_recipe_not_readable"
+  }
+]

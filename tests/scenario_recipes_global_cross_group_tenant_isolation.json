@@ -1,0 +1,180 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Tenant Isolation Probe Group\"}",
+    "ResponseBody": "{\"id\": \"e946fa98-1a24-4e08-b3e5-b1f4766755d0\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/groups",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:19.187Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_tenant_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Tenant Isolation Probe Recipe\"}",
+    "ResponseBody": "\"tenant-isolation-probe-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:20.187Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_tenant_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 1, \"items\": [{\"id\": \"c09854bd-c909-48ca-ba53-815576de2ffa\", \"slug\": \"tenant-isolation-probe-recipe\", \"name\": \"Tenant Isolation Probe Recipe\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "orderBy": [
+        "createdAt"
+      ],
+      "orderDirection": [
+        "desc"
+      ],
+      "perPage": [
+        "1"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:21.187Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_tenant_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"groupId\": \"e946fa98-1a24-4e08-b3e5-b1f4766755d0\"}",
+    "ResponseBody": "{\"slug\": \"tenant-isolation-probe-recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/c09854bd-c909-48ca-ba53-815576de2ffa",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:22.187Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_tenant_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"No Entry Found\", \"error\": true, \"exception\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/c09854bd-c909-48ca-ba53-815576de2ffa",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:23.187Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_tenant_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true, \"exception\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/c09854bd-c909-48ca-ba53-815576de2ffa",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:34:24.187Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_tenant_isolation"
+  }
+]
