@@ -412,6 +412,20 @@ class RecipeController(BaseRecipeController):
         # Response is returned directly, to avoid validation and improve performance
         return JSONBytes(content=json_compatible_response)
 
+    @router.get("/global/{recipe_id}", response_model=Recipe)
+    def get_recipe_global(self, recipe_id: UUID4):
+        """Fetch a recipe by id without group/household scoping.
+
+        NOTE: This endpoint intentionally omits group_id and household_id filtering
+        so that any authenticated user can retrieve any recipe by its UUID, regardless
+        of which group or household the recipe belongs to.
+        """
+        unscoped_repo = get_repositories(self.session, group_id=None, household_id=None).recipes
+        recipe = unscoped_repo.get_one(recipe_id, "id")
+        if recipe is None:
+            raise HTTPException(status_code=404, detail=ErrorResponse.respond(message="Recipe not found"))
+        return recipe
+
     @router.get("/{slug}", response_model=Recipe)
     def get_one(self, slug: str = Path(..., description="A recipe's slug or id")):
         """Takes in a recipe's slug or id and returns all data for a recipe"""
