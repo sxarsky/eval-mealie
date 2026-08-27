@@ -1,0 +1,196 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Seasonal Bakes\"}",
+    "ResponseBody": "{\"name\": \"Seasonal Bakes\", \"id\": \"766bcd6a-8bdf-490c-8e1d-f8368209c3d6\", \"groupId\": \"ddf28eb0-c637-4ca9-a420-5d8268889538\", \"slug\": \"seasonal-bakes\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:29.137Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_after_category_removal",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Autumn Apple Tart\"}",
+    "ResponseBody": "\"autumn-apple-tart\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:30.137Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_after_category_removal",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeCategory\": [{\"id\": \"766bcd6a-8bdf-490c-8e1d-f8368209c3d6\", \"groupId\": \"ddf28eb0-c637-4ca9-a420-5d8268889538\", \"name\": \"Seasonal Bakes\", \"slug\": \"seasonal-bakes\"}]}",
+    "ResponseBody": "{\"slug\": \"autumn-apple-tart\", \"name\": \"Autumn Apple Tart\", \"recipeCategory\": [{\"id\": \"766bcd6a-8bdf-490c-8e1d-f8368209c3d6\", \"groupId\": \"ddf28eb0-c637-4ca9-a420-5d8268889538\", \"name\": \"Seasonal Bakes\", \"slug\": \"seasonal-bakes\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/autumn-apple-tart",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:31.137Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_after_category_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 50, \"total\": 1, \"items\": [{\"slug\": \"autumn-apple-tart\", \"name\": \"Autumn Apple Tart\", \"recipeCategory\": [{\"id\": \"766bcd6a-8bdf-490c-8e1d-f8368209c3d6\", \"name\": \"Seasonal Bakes\", \"slug\": \"seasonal-bakes\"}]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ],
+      "perPage": [
+        "50"
+      ],
+      "orderBy": [
+        "createdAt"
+      ],
+      "orderDirection": [
+        "desc"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:32.137Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_after_category_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeCategory\": []}",
+    "ResponseBody": "{\"slug\": \"autumn-apple-tart\", \"name\": \"Autumn Apple Tart\", \"recipeCategory\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/autumn-apple-tart",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:33.137Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_after_category_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 50, \"total\": 0, \"items\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ],
+      "perPage": [
+        "50"
+      ],
+      "orderBy": [
+        "createdAt"
+      ],
+      "orderDirection": [
+        "desc"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:34.137Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_after_category_removal"
+  }
+]
