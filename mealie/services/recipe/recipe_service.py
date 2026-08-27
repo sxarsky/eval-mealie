@@ -21,7 +21,7 @@ from mealie.repos.repository_factory import AllRepositories
 from mealie.repos.repository_generic import RepositoryGeneric
 from mealie.schema.household.household import HouseholdInDB, HouseholdRecipeUpdate
 from mealie.schema.openai.recipe import OpenAIRecipe
-from mealie.schema.recipe.recipe import CreateRecipe, Recipe, create_recipe_slug
+from mealie.schema.recipe.recipe import CreateRecipe, Recipe, RecipeStats, create_recipe_slug
 from mealie.schema.recipe.recipe_ingredient import RecipeIngredient
 from mealie.schema.recipe.recipe_notes import RecipeNote
 from mealie.schema.recipe.recipe_settings import RecipeSettings
@@ -38,6 +38,20 @@ from mealie.services.scraper import cleaner
 from .template_service import TemplateService
 
 RECIPE_CREATED_EVENT_SUBJECT = "recipe.recipe-created"
+
+
+def compute_recipe_stats(recipe: Recipe) -> RecipeStats:
+    """Return counts summarizing a recipe's ingredients, instructions, tools, tags, and categories.
+
+    ``None`` collections are treated as empty.
+    """
+    return RecipeStats(
+        ingredient_count=len(recipe.recipe_ingredient or []),
+        instruction_count=len(recipe.recipe_instructions or []),
+        tool_count=len(recipe.tools or []),
+        tag_count=len(recipe.tags or []),
+        category_count=len(recipe.recipe_category or []),
+    )
 
 
 class RecipeServiceBase(BaseService):
@@ -198,6 +212,11 @@ class RecipeService(RecipeServiceBase):
 
         else:
             return self._get_recipe(slug_or_id, "slug")
+
+    def get_stats(self, slug_or_id: str | UUID) -> RecipeStats:
+        """Fetch a recipe and return computed counts of its contents."""
+        recipe = self.get_one(slug_or_id)
+        return compute_recipe_stats(recipe)
 
     def create_one(self, create_data: Recipe | CreateRecipe) -> Recipe:
         if create_data.name is None:

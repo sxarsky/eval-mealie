@@ -38,6 +38,7 @@ from mealie.schema.recipe.recipe import (
     CreateRecipe,
     CreateRecipeByUrlBulk,
     RecipeLastMade,
+    RecipeStats,
     RecipeSummary,
 )
 from mealie.schema.recipe.recipe_asset import RecipeAsset
@@ -422,6 +423,17 @@ class RecipeController(BaseRecipeController):
             return None
 
         return recipe
+
+    @router.get("/{slug}/stats", response_model=RecipeStats)
+    def get_one_stats(self, slug: str = Path(..., description="A recipe's slug or id")):
+        """Returns computed counts of a recipe's ingredients, instructions, tools, tags, and categories."""
+        try:
+            stats = self.service.get_stats(slug)
+        except Exception as e:
+            self.handle_exceptions(e)
+            return None
+
+        return stats
 
     @router.post("", status_code=201, response_model=str)
     def create_one(self, data: CreateRecipe) -> str | None:
