@@ -1,0 +1,117 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Fractional Scale Test\"}",
+    "ResponseBody": "\"fractional-scale-test\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T03:44:41.391Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-fractional-factor",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipe_servings\": 8, \"recipe_yield_quantity\": 400.0, \"recipe_ingredient\": [{\"quantity\": 200.0, \"note\": \"milk\"}, {\"note\": \"salt to taste\"}]}",
+    "ResponseBody": "{\"recipe_servings\": 8, \"recipe_yield_quantity\": 400.0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/fractional-scale-test",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T03:44:42.391Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-fractional-factor"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"recipe_servings\": 4.0, \"recipe_yield_quantity\": 200.0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/fractional-scale-test/scale",
+    "QueryParams": {
+      "scale": [
+        "0.5"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T03:44:43.391Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-fractional-factor"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/fractional-scale-test",
+    "QueryParams": {},
+    "StatusCode": 204,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T03:44:44.391Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-fractional-factor"
+  }
+]
