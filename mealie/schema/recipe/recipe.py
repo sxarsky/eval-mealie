@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Annotated, Any, ClassVar
 from uuid import uuid4
 
-from pydantic import UUID4, BaseModel, ConfigDict, Field, field_validator
+from pydantic import UUID4, BaseModel, ConfigDict, Field, computed_field, field_validator
 from pydantic_core.core_schema import ValidationInfo
 from slugify import slugify
 from sqlalchemy import Select, desc, func, or_, select, text
@@ -147,6 +147,12 @@ class RecipeSummary(MealieModel):
     updated_at: datetime.datetime | None = UpdatedAtField(None)
     last_made: datetime.datetime | None = None
     model_config = ConfigDict(from_attributes=True)
+
+    @computed_field
+    @property
+    def time_fields_count(self) -> int:
+        """Return the number of non-null time fields (prep/cook/perform/total)."""
+        return sum(1 for t in (self.prep_time, self.cook_time, self.perform_time, self.total_time) if t is not None)
 
     @field_validator("recipe_servings", "recipe_yield_quantity", mode="before")
     def clean_numbers(val: Any):
