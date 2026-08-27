@@ -1,0 +1,147 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"privateGroup\": false}",
+    "ResponseBody": "{\"privateGroup\": false}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/groups/preferences",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:23:59.314Z",
+    "Scheme": "http",
+    "scenarioName": "explore-public-recipes-time-fields-count"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"privateHousehold\": false, \"recipePublic\": true}",
+    "ResponseBody": "{\"privateHousehold\": false, \"recipePublic\": true}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/households/preferences",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:00.314Z",
+    "Scheme": "http",
+    "scenarioName": "explore-public-recipes-time-fields-count"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Explore Count Probe\"}",
+    "ResponseBody": "\"explore-count-probe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:01.314Z",
+    "Scheme": "http",
+    "scenarioName": "explore-public-recipes-time-fields-count",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"prepTime\": \"5 minutes\", \"cookTime\": \"10 minutes\"}",
+    "ResponseBody": "{\"slug\": \"explore-count-probe\", \"prepTime\": \"5 minutes\", \"cookTime\": \"10 minutes\", \"timeFieldsCount\": 2}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/explore-count-probe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:02.314Z",
+    "Scheme": "http",
+    "scenarioName": "explore-public-recipes-time-fields-count"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 1, \"items\": [{\"slug\": \"explore-count-probe\", \"prepTime\": \"5 minutes\", \"cookTime\": \"10 minutes\", \"timeFieldsCount\": 2}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/explore/groups/home/recipes",
+    "QueryParams": {
+      "search": [
+        "Explore Count Probe"
+      ],
+      "perPage": [
+        "5"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:24:03.314Z",
+    "Scheme": "http",
+    "scenarioName": "explore-public-recipes-time-fields-count"
+  }
+]
