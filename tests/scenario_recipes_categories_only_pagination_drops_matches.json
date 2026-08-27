@@ -1,0 +1,162 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Weeknight Dinners\"}",
+    "ResponseBody": "{\"name\": \"Weeknight Dinners\", \"id\": \"b3e96c17-d645-412e-acdc-540559973e9e\", \"groupId\": \"68831a53-5dc3-458f-bcca-156b94652268\", \"slug\": \"weeknight-dinners\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:17.140Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_drops_matches",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Categorized Skillet Chicken\"}",
+    "ResponseBody": "\"categorized-skillet-chicken\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:18.140Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_drops_matches",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeCategory\": [{\"id\": \"b3e96c17-d645-412e-acdc-540559973e9e\", \"groupId\": \"68831a53-5dc3-458f-bcca-156b94652268\", \"name\": \"Weeknight Dinners\", \"slug\": \"weeknight-dinners\"}]}",
+    "ResponseBody": "{\"slug\": \"categorized-skillet-chicken\", \"name\": \"Categorized Skillet Chicken\", \"recipeCategory\": [{\"id\": \"b3e96c17-d645-412e-acdc-540559973e9e\", \"groupId\": \"68831a53-5dc3-458f-bcca-156b94652268\", \"name\": \"Weeknight Dinners\", \"slug\": \"weeknight-dinners\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/categorized-skillet-chicken",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:19.140Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_drops_matches"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Uncategorized Lentil Soup\"}",
+    "ResponseBody": "\"uncategorized-lentil-soup\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:20.140Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_drops_matches",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 1, \"total\": 1, \"total_pages\": 1, \"items\": [{\"slug\": \"categorized-skillet-chicken\", \"name\": \"Categorized Skillet Chicken\", \"recipeCategory\": [{\"id\": \"b3e96c17-d645-412e-acdc-540559973e9e\", \"name\": \"Weeknight Dinners\", \"slug\": \"weeknight-dinners\"}]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ],
+      "perPage": [
+        "1"
+      ],
+      "page": [
+        "1"
+      ],
+      "orderBy": [
+        "createdAt"
+      ],
+      "orderDirection": [
+        "desc"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T01:08:21.140Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_drops_matches"
+  }
+]
