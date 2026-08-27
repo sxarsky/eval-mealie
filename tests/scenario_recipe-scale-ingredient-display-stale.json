@@ -1,0 +1,117 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"scale-display-probe\"}",
+    "ResponseBody": "\"scale-display-probe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:23:26.622Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-stale",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\": 4, \"recipeYieldQuantity\": 2, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2, \"note\": \"flour\", \"display\": \"\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"\"}]}",
+    "ResponseBody": "{\"slug\": \"scale-display-probe\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"flour\", \"display\": \"2 flour\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/scale-display-probe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:23:27.622Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-stale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-display-probe\", \"recipeServings\": 8.0, \"recipeYieldQuantity\": 4.0, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 4.0, \"note\": \"flour\", \"display\": \"4 flour\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-display-probe/scale",
+    "QueryParams": {
+      "scale": [
+        "2"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:23:28.622Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-stale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/scale-display-probe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-27T00:23:29.622Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-stale"
+  }
+]
