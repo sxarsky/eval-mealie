@@ -423,6 +423,24 @@ class RecipeController(BaseRecipeController):
 
         return recipe
 
+    @router.get("/{slug}/scale", response_model=Recipe)
+    def get_one_scaled(
+        self,
+        slug: str = Path(..., description="A recipe's slug or id"),
+        scale: float = Query(1.0, gt=0, description="Factor to scale ingredient quantities and yield by"),
+    ):
+        """Returns the recipe with ingredient quantities and yield scaled by the given factor.
+
+        The recipe is not modified in the database; ingredients without a quantity are left unchanged.
+        """
+        try:
+            recipe = self.service.get_one_scaled(slug, scale)
+        except Exception as e:
+            self.handle_exceptions(e)
+            return None
+
+        return recipe
+
     @router.post("", status_code=201, response_model=str)
     def create_one(self, data: CreateRecipe) -> str | None:
         """Takes in a JSON string and loads data into the database as a new entry"""
