@@ -1,0 +1,156 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Pagination Integrity Cat\"}",
+    "ResponseBody": "{\"id\": \"3f6c1b2a-9d84-4f21-b7e5-0c1a2d3e4f50\", \"name\": \"Pagination Integrity Cat\", \"slug\": \"pagination-integrity-cat\", \"groupId\": \"467be5fe-79f6-4b6a-8386-18891925aa66\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:20.505Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_integrity",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Categorized Paging Recipe\"}",
+    "ResponseBody": "\"categorized-paging-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:21.505Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_integrity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Categorized Paging Recipe\", \"slug\": \"categorized-paging-recipe\", \"recipeCategory\": [{\"id\": \"3f6c1b2a-9d84-4f21-b7e5-0c1a2d3e4f50\", \"name\": \"Pagination Integrity Cat\", \"slug\": \"pagination-integrity-cat\"}]}",
+    "ResponseBody": "{\"slug\": \"categorized-paging-recipe\", \"name\": \"Categorized Paging Recipe\", \"recipeCategory\": [{\"id\": \"3f6c1b2a-9d84-4f21-b7e5-0c1a2d3e4f50\", \"name\": \"Pagination Integrity Cat\", \"slug\": \"pagination-integrity-cat\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/categorized-paging-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:22.505Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_integrity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Uncategorized Paging Recipe\"}",
+    "ResponseBody": "\"uncategorized-paging-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:23.505Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_integrity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 1, \"total\": 1, \"total_pages\": 1, \"items\": [{\"slug\": \"categorized-paging-recipe\", \"name\": \"Categorized Paging Recipe\", \"recipeCategory\": [{\"id\": \"3f6c1b2a-9d84-4f21-b7e5-0c1a2d3e4f50\", \"name\": \"Pagination Integrity Cat\", \"slug\": \"pagination-integrity-cat\"}]}], \"next\": null}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ],
+      "perPage": [
+        "1"
+      ],
+      "page": [
+        "1"
+      ],
+      "orderBy": [
+        "created_at"
+      ],
+      "orderDirection": [
+        "desc"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:24.505Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_pagination_integrity"
+  }
+]
