@@ -1,0 +1,200 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 0, \"by_category\": {}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/statistics",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:37:56.334Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_multi_category_single_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"SkyrampMultiCatOne\"}",
+    "ResponseBody": "{\"name\": \"SkyrampMultiCatOne\", \"id\": \"21111111-2222-4333-8444-555555555551\", \"groupId\": \"318440ce-4638-4bd4-ac11-3baaa1d605b0\", \"slug\": \"skyrampmulticatone\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:37:57.334Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_multi_category_single_recipe",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"SkyrampMultiCatTwo\"}",
+    "ResponseBody": "{\"name\": \"SkyrampMultiCatTwo\", \"id\": \"22111111-2222-4333-8444-555555555552\", \"groupId\": \"318440ce-4638-4bd4-ac11-3baaa1d605b0\", \"slug\": \"skyrampmulticattwo\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:37:58.334Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_multi_category_single_recipe",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Multi Cat Recipe\"}",
+    "ResponseBody": "\"skyramp-multi-cat-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:37:59.334Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_multi_category_single_recipe",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeCategory\": [{\"id\": \"21111111-2222-4333-8444-555555555551\", \"name\": \"SkyrampMultiCatOne\", \"slug\": \"skyrampmulticatone\"}, {\"id\": \"22111111-2222-4333-8444-555555555552\", \"name\": \"SkyrampMultiCatTwo\", \"slug\": \"skyrampmulticattwo\"}]}",
+    "ResponseBody": "{\"slug\": \"skyramp-multi-cat-recipe\", \"name\": \"Skyramp Multi Cat Recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-multi-cat-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:38:00.334Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_multi_category_single_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"total\": 1, \"by_category\": {\"SkyrampMultiCatOne\": 1, \"SkyrampMultiCatTwo\": 1}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/statistics",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:38:01.334Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_multi_category_single_recipe"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-multi-cat-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:38:02.334Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_statistics_multi_category_single_recipe"
+  }
+]
