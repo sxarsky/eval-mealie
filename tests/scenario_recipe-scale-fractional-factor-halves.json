@@ -1,0 +1,90 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Scale Halving Recipe\"}",
+    "ResponseBody": "\"scale-halving-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:05.819Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-fractional-factor-halves",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\": 4, \"recipeYieldQuantity\": 2, \"recipeIngredient\": [{\"quantity\": 2, \"note\": \"cups flour\"}]}",
+    "ResponseBody": "{\"slug\": \"scale-halving-recipe\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"cups flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/scale-halving-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:06.819Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-fractional-factor-halves"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-halving-recipe\", \"recipeServings\": 2.0, \"recipeYieldQuantity\": 1.0, \"recipeIngredient\": [{\"quantity\": 1.0, \"note\": \"cups flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-halving-recipe/scale",
+    "QueryParams": {
+      "scale": [
+        "0.5"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:40:07.819Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-fractional-factor-halves"
+  }
+]

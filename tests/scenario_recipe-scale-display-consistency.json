@@ -1,0 +1,90 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Scale Display Consistency Recipe\"}",
+    "ResponseBody": "\"scale-display-consistency-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:38:13.021Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-display-consistency",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\": 4, \"recipeYieldQuantity\": 2, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2, \"note\": \"cups flour\"}]}",
+    "ResponseBody": "{\"slug\": \"scale-display-consistency-recipe\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeIngredient\": [{\"quantity\": 2.0, \"display\": \"2 cups flour\", \"note\": \"cups flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/scale-display-consistency-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:38:14.021Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-display-consistency"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-display-consistency-recipe\", \"recipeServings\": 12.0, \"recipeYieldQuantity\": 6.0, \"recipeIngredient\": [{\"quantity\": 6.0, \"display\": \"6 cups flour\", \"note\": \"cups flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-display-consistency-recipe/scale",
+    "QueryParams": {
+      "scale": [
+        "3"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:38:15.021Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-display-consistency"
+  }
+]
