@@ -387,6 +387,11 @@ class RecipeLastMade(BaseModel):
     timestamp: datetime.datetime
 
 
+class RecipeStatistics(BaseModel):
+    total: int
+    by_category: dict[str, int]
+
+
 from mealie.schema.recipe.recipe_ingredient import RecipeIngredient  # noqa: E402
 
 RecipeSummary.model_rebuild()
