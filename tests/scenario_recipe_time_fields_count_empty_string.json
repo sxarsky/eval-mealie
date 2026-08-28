@@ -1,0 +1,86 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Time Fields Empty String Probe\"}",
+    "ResponseBody": "\"time-fields-empty-string-probe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:01:33.526Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_empty_string",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Time Fields Empty String Probe\", \"prepTime\": \"30 minutes\", \"cookTime\": \"\"}",
+    "ResponseBody": "{\"slug\": \"time-fields-empty-string-probe\", \"prepTime\": \"30 minutes\", \"cookTime\": \"\", \"performTime\": null, \"totalTime\": null, \"timeFieldsCount\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/time-fields-empty-string-probe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:01:34.526Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_empty_string"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"time-fields-empty-string-probe\", \"prepTime\": \"30 minutes\", \"cookTime\": \"\", \"performTime\": null, \"totalTime\": null, \"timeFieldsCount\": 1}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/time-fields-empty-string-probe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:01:35.526Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_empty_string"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Time Fields Recalculation Probe\"}",
+    "ResponseBody": "\"time-fields-recalculation-probe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:01:45.400Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_recalculates_on_mutation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Time Fields Recalculation Probe\", \"prepTime\": \"30 minutes\", \"cookTime\": \"1 hour\", \"performTime\": \"15 minutes\", \"totalTime\": \"1 hour 45 minutes\"}",
+    "ResponseBody": "{\"slug\": \"time-fields-recalculation-probe\", \"prepTime\": \"30 minutes\", \"cookTime\": \"1 hour\", \"performTime\": \"15 minutes\", \"totalTime\": \"1 hour 45 minutes\", \"timeFieldsCount\": 4}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/time-fields-recalculation-probe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:01:46.400Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_recalculates_on_mutation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Time Fields Recalculation Probe\", \"prepTime\": null, \"cookTime\": null, \"performTime\": null, \"totalTime\": null}",
+    "ResponseBody": "{\"slug\": \"time-fields-recalculation-probe\", \"prepTime\": null, \"cookTime\": null, \"performTime\": null, \"totalTime\": null, \"timeFieldsCount\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/time-fields-recalculation-probe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-08-28T22:01:47.400Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_time_fields_count_recalculates_on_mutation"
+  }
+]
