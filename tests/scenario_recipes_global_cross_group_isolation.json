@@ -1,0 +1,339 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"cross group recipe a\"}",
+    "ResponseBody": "\"cross-group-recipe-a\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:18.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"a1f6c3d2-4b8e-4c17-9f52-6d0b8e73a914\", \"name\": \"cross group recipe a\", \"slug\": \"cross-group-recipe-a\", \"groupId\": \"efbcdcd9-6644-4ebb-8138-2b6b2bea523a\", \"householdId\": \"c8fdf71a-3a33-44f6-9b35-5a198ece7cae\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/cross-group-recipe-a",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:19.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"cross group b\"}",
+    "ResponseBody": "{\"id\": \"b2e7d4c3-5c9f-4d28-8a63-7e1c9f84b025\", \"name\": \"cross group b\", \"slug\": \"cross-group-b\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/groups",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:20.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"cross household b\", \"groupId\": \"b2e7d4c3-5c9f-4d28-8a63-7e1c9f84b025\"}",
+    "ResponseBody": "{\"id\": \"c3d8e5b4-6daf-4e39-9b74-8f2da095c136\", \"name\": \"cross household b\", \"slug\": \"cross-household-b\", \"groupId\": \"b2e7d4c3-5c9f-4d28-8a63-7e1c9f84b025\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/households",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:21.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"username\": \"crossgroupbuser\", \"fullName\": \"Group B User\", \"email\": \"crossgroupbuser@example.com\", \"password\": \"GroupBPass123!\", \"group\": \"cross group b\", \"household\": \"cross household b\", \"admin\": false}",
+    "ResponseBody": "{\"id\": \"d4e9f6c5-7eb0-4f4a-8c85-903eb1a6d247\", \"username\": \"crossgroupbuser\", \"email\": \"crossgroupbuser@example.com\", \"admin\": false, \"group\": \"cross group b\", \"household\": \"cross household b\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/admin/users",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:22.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation",
+    "UniqueFields": [
+      "username",
+      "email"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"username\": \"crossgroupbuser@example.com\", \"password\": \"GroupBPass123!\"}",
+    "ResponseBody": "{\"access_token\": \"group-b-bearer-token\", \"token_type\": \"bearer\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/auth/token",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:23.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"No Entry Found\", \"error\": true}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/cross-group-recipe-a",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:24.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/a1f6c3d2-4b8e-4c17-9f52-6d0b8e73a914",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:25.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"a1f6c3d2-4b8e-4c17-9f52-6d0b8e73a914\", \"slug\": \"cross-group-recipe-a\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/cross-group-recipe-a",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:26.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"d4e9f6c5-7eb0-4f4a-8c85-903eb1a6d247\", \"username\": \"crossgroupbuser\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/admin/users/d4e9f6c5-7eb0-4f4a-8c85-903eb1a6d247",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:27.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"c3d8e5b4-6daf-4e39-9b74-8f2da095c136\", \"name\": \"cross household b\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/admin/households/c3d8e5b4-6daf-4e39-9b74-8f2da095c136",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:28.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"b2e7d4c3-5c9f-4d28-8a63-7e1c9f84b025\", \"name\": \"cross group b\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/admin/groups/b2e7d4c3-5c9f-4d28-8a63-7e1c9f84b025",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:29.361Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_cross_group_isolation"
+  }
+]
