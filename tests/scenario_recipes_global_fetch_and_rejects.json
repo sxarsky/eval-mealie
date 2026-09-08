@@ -1,0 +1,194 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"global fetch recipe\"}",
+    "ResponseBody": "\"global-fetch-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:36.252Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_fetch_and_rejects",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"e5c1b9a8-2f34-4d6b-8e71-1a4c7d9b0e35\", \"name\": \"global fetch recipe\", \"slug\": \"global-fetch-recipe\", \"groupId\": \"efbcdcd9-6644-4ebb-8138-2b6b2bea523a\", \"householdId\": \"c8fdf71a-3a33-44f6-9b35-5a198ece7cae\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global-fetch-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:37.252Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_fetch_and_rejects"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"e5c1b9a8-2f34-4d6b-8e71-1a4c7d9b0e35\", \"name\": \"global fetch recipe\", \"slug\": \"global-fetch-recipe\", \"groupId\": \"efbcdcd9-6644-4ebb-8138-2b6b2bea523a\", \"householdId\": \"c8fdf71a-3a33-44f6-9b35-5a198ece7cae\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/e5c1b9a8-2f34-4d6b-8e71-1a4c7d9b0e35",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:38.252Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_fetch_and_rejects"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/3f1c9a52-8b7e-4d1a-9c6f-2e5b7a0d4c81",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:39.252Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_fetch_and_rejects"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": [{\"type\": \"uuid_parsing\", \"loc\": [\"path\", \"recipe_id\"]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/not-a-uuid",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:40.252Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_fetch_and_rejects"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"e5c1b9a8-2f34-4d6b-8e71-1a4c7d9b0e35\", \"slug\": \"global-fetch-recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/global-fetch-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:41.252Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_fetch_and_rejects"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/e5c1b9a8-2f34-4d6b-8e71-1a4c7d9b0e35",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:06:42.252Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_global_fetch_and_rejects"
+  }
+]
