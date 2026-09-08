@@ -70,15 +70,15 @@
   <BaseDialog
     v-model="bulkDeleteDialog"
     width="650px"
-    :title="$t('general.confirm')"
+    :title="`${$t('general.confirm')} (${bulkDeleteTarget.length})`"
     :icon="$globals.icons.alertCircle"
     color="error"
     can-confirm
     @confirm="$emit('bulk-action', 'delete-selected', bulkDeleteTarget)"
   >
     <v-card-text>
-      <p class="h4">
-        {{ $t('general.confirm-delete-generic-items') }}
+      <p class="h4" data-testid="bulk-delete-count">
+        {{ $t('general.confirm-delete-generic-items') }} ({{ bulkDeleteTarget.length }})
       </p>
       <v-card variant="outlined">
         <v-virtual-scroll height="400" item-height="25" :items="bulkDeleteTarget">
