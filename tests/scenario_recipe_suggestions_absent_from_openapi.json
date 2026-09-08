@@ -1,0 +1,26 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"openapi\": \"3.1.0\", \"info\": {\"title\": \"Mealie\"}, \"paths\": {\"/api/explore/groups/{group_slug}/recipes/suggestions\": {\"get\": {\"operationId\": \"suggest_recipes\"}}}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/openapi.json",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-08T21:27:50.473Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_suggestions_absent_from_openapi"
+  }
+]
