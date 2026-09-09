@@ -1,0 +1,264 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"catsrch-cat-b204\"}",
+    "ResponseBody": "{\"id\": \"7c1de0aa-9f43-4b28-8f61-3a2d1e5c9047\", \"name\": \"catsrch-cat-b204\", \"slug\": \"catsrch-cat-b204\", \"groupId\": \"bfb4a555-2bda-44e9-aa5e-582fa61dd6fc\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:20.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"zorbaxine plain\"}",
+    "ResponseBody": "\"zorbaxine-plain\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:21.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"zorbaxine filed\"}",
+    "ResponseBody": "\"zorbaxine-filed\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:22.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"3e8b5f21-6c74-4d19-b0a3-8f52c7e14d96\", \"name\": \"zorbaxine filed\", \"slug\": \"zorbaxine-filed\", \"recipeCategory\": [], \"tags\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/zorbaxine-filed",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:23.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"id\": \"3e8b5f21-6c74-4d19-b0a3-8f52c7e14d96\", \"name\": \"zorbaxine filed\", \"slug\": \"zorbaxine-filed\", \"recipeCategory\": [{\"id\": \"7c1de0aa-9f43-4b28-8f61-3a2d1e5c9047\", \"name\": \"catsrch-cat-b204\", \"slug\": \"catsrch-cat-b204\"}]}",
+    "ResponseBody": "{\"id\": \"3e8b5f21-6c74-4d19-b0a3-8f52c7e14d96\", \"name\": \"zorbaxine filed\", \"slug\": \"zorbaxine-filed\", \"recipeCategory\": [{\"id\": \"7c1de0aa-9f43-4b28-8f61-3a2d1e5c9047\", \"name\": \"catsrch-cat-b204\", \"slug\": \"catsrch-cat-b204\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/recipes/zorbaxine-filed",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:24.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 100, \"total\": 1, \"total_pages\": 1, \"items\": [{\"id\": \"3e8b5f21-6c74-4d19-b0a3-8f52c7e14d96\", \"name\": \"zorbaxine filed\", \"slug\": \"zorbaxine-filed\", \"recipeCategory\": [{\"id\": \"7c1de0aa-9f43-4b28-8f61-3a2d1e5c9047\", \"name\": \"catsrch-cat-b204\", \"slug\": \"catsrch-cat-b204\"}]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ],
+      "search": [
+        "zorbaxine"
+      ],
+      "perPage": [
+        "100"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:25.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"3e8b5f21-6c74-4d19-b0a3-8f52c7e14d96\", \"slug\": \"zorbaxine-filed\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/zorbaxine-filed",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:26.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"9a4f2c68-1b53-4e07-a2d8-6c31f0b95e42\", \"slug\": \"zorbaxine-plain\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/zorbaxine-plain",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:27.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"7c1de0aa-9f43-4b28-8f61-3a2d1e5c9047\", \"name\": \"catsrch-cat-b204\", \"slug\": \"catsrch-cat-b204\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/organizers/categories/7c1de0aa-9f43-4b28-8f61-3a2d1e5c9047",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:42:28.966Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_composes_with_search"
+  }
+]
