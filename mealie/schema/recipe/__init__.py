@@ -71,7 +71,7 @@ from .recipe_ingredient import (
     UnitFoodBase,
 )
 from .recipe_notes import RecipeNote
-from .recipe_nutrition import Nutrition
+from .recipe_nutrition import Nutrition, NutritionValues, RecipeNutritionSummary
 from .recipe_scraper import ScrapeRecipe, ScrapeRecipeBase, ScrapeRecipeData, ScrapeRecipeTest
 from .recipe_settings import RecipeSettings
 from .recipe_share_token import RecipeShareToken, RecipeShareTokenCreate, RecipeShareTokenSave, RecipeShareTokenSummary
@@ -112,6 +112,7 @@ __all__ = [
     "SlugResponse",
     "UpdateImageResponse",
     "RecipeNote",
+    "RecipeNutritionSummary",
     "CategoryBase",
     "CategoryIn",
     "CategoryOut",
@@ -139,6 +140,7 @@ __all__ = [
     "RecipeStep",
     "RecipeImageTypes",
     "Nutrition",
+    "NutritionValues",
     "CreateIngredientFood",
     "CreateIngredientFoodAlias",
     "CreateIngredientUnit",

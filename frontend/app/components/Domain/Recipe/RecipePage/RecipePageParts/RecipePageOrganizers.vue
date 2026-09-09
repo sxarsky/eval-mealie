@@ -75,6 +75,12 @@
       class="mt-4"
       :edit="isEditForm"
     />
+    <RecipePageNutritionSummary
+      v-if="recipe.settings.showNutrition && !isEditForm"
+      :slug="recipe.slug"
+      :servings="recipe.recipeServings"
+      :nutrition="recipe.nutrition"
+    />
     <RecipeAssets
       v-if="recipe.settings.showAssets"
       v-model="recipe.assets"
@@ -91,6 +97,7 @@ import type { NoUndefinedField } from "~/lib/api/types/non-generated";
 import type { Recipe } from "~/lib/api/types/recipe";
 import RecipeOrganizerSelector from "@/components/Domain/Recipe/RecipeOrganizerSelector.vue";
 import RecipeNutrition from "~/components/Domain/Recipe/RecipeNutrition.vue";
+import RecipePageNutritionSummary from "./RecipePageNutritionSummary.vue";
 import RecipeChips from "@/components/Domain/Recipe/RecipeChips.vue";
 import RecipeAssets from "@/components/Domain/Recipe/RecipeAssets.vue";
 

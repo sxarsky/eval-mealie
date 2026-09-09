@@ -12,6 +12,7 @@ import type {
   ParsedIngredient,
   UpdateImageResponse,
   RecipeLastMade,
+  RecipeNutritionSummary,
   RecipeSuggestionQuery,
   RecipeSuggestionResponse,
   RecipeTimelineEventIn,
@@ -51,6 +52,7 @@ const routes = {
   recipesRecipeSlug: (recipe_slug: string) => `${prefix}/recipes/${recipe_slug}`,
   recipesRecipeSlugImage: (recipe_slug: string) => `${prefix}/recipes/${recipe_slug}/image`,
   recipesRecipeSlugAssets: (recipe_slug: string) => `${prefix}/recipes/${recipe_slug}/assets`,
+  recipesRecipeSlugNutrition: (recipe_slug: string) => `${prefix}/recipes/${recipe_slug}/nutrition`,
 
   recipesSlugComments: (slug: string) => `${prefix}/recipes/${slug}/comments`,
   recipesSlugCommentsId: (slug: string, id: number) => `${prefix}/recipes/${slug}/comments/${id}`,
@@ -246,6 +248,10 @@ export class RecipeAPI extends BaseCRUDAPI<CreateRecipe, Recipe, Recipe> {
 
   async patchMany(payload: Recipe[]) {
     return await this.requests.patch<Recipe[]>(routes.recipesBase, payload);
+  }
+
+  async getNutritionSummary(recipeSlug: string) {
+    return await this.requests.get<RecipeNutritionSummary>(routes.recipesRecipeSlugNutrition(recipeSlug));
   }
 
   async updateLastMade(recipeSlug: string, timestamp: string) {

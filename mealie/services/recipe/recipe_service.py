@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import shutil
 from datetime import UTC, datetime
 from pathlib import Path
@@ -24,6 +25,7 @@ from mealie.schema.openai.recipe import OpenAIRecipe
 from mealie.schema.recipe.recipe import CreateRecipe, Recipe, create_recipe_slug
 from mealie.schema.recipe.recipe_ingredient import RecipeIngredient
 from mealie.schema.recipe.recipe_notes import RecipeNote
+from mealie.schema.recipe.recipe_nutrition import NutritionValues, RecipeNutritionSummary
 from mealie.schema.recipe.recipe_settings import RecipeSettings
 from mealie.schema.recipe.recipe_step import RecipeStep
 from mealie.schema.recipe.recipe_timeline_events import RecipeTimelineEventCreate, TimelineEventType
@@ -38,6 +40,50 @@ from mealie.services.scraper import cleaner
 from .template_service import TemplateService
 
 RECIPE_CREATED_EVENT_SUBJECT = "recipe.recipe-created"
+
+NUTRITION_VALUE_PATTERN = re.compile(r"-?\d+(?:[.,]\d+)?")
+NUTRITION_PER_SERVING_PRECISION = 2
+
+
+def parse_nutrition_value(value: str | None) -> float | None:
+    """
+    Reads the first number out of a nutrition string. Recipes store nutrition as free text
+    (e.g. "250", "250 kcal", "12.5g"), so the unit and any surrounding text are ignored.
+    """
+    if value is None:
+        return None
+
+    match = NUTRITION_VALUE_PATTERN.search(str(value))
+    if not match:
+        return None
+
+    return float(match.group(0).replace(",", "."))
+
+
+def summarize_nutrition(recipe: Recipe) -> RecipeNutritionSummary:
+    """Builds the numeric nutrition summary (whole recipe and per serving) for a recipe"""
+    raw = recipe.nutrition.model_dump() if recipe.nutrition else {}
+    total = NutritionValues(**{key: parse_nutrition_value(raw.get(key)) for key in NutritionValues.model_fields})
+    has_nutrition = any(value is not None for value in total.model_dump().values())
+
+    servings = recipe.recipe_servings or 0
+    per_serving: NutritionValues | None = None
+    if servings > 0:
+        per_serving = NutritionValues(
+            **{
+                key: None if value is None else round(value / servings, NUTRITION_PER_SERVING_PRECISION)
+                for key, value in total.model_dump().items()
+            }
+        )
+
+    return RecipeNutritionSummary(
+        recipe_id=recipe.id,
+        slug=recipe.slug,
+        servings=servings,
+        has_nutrition=has_nutrition,
+        total=total,
+        per_serving=per_serving,
+    )
 
 
 class RecipeServiceBase(BaseService):
@@ -198,6 +244,9 @@ class RecipeService(RecipeServiceBase):
 
         else:
             return self._get_recipe(slug_or_id, "slug")
+
+    def get_nutrition_summary(self, slug_or_id: str | UUID) -> RecipeNutritionSummary:
+        return summarize_nutrition(self.get_one(slug_or_id))
 
     def create_one(self, create_data: Recipe | CreateRecipe) -> Recipe:
         if create_data.name is None:

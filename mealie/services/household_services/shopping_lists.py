@@ -30,6 +30,16 @@ from mealie.schema.response.pagination import OrderDirection, PaginationQuery
 from mealie.services.parser_services._base import DataMatcher
 from mealie.services.parser_services.parser_utils import UnitConverter, merge_quantity_and_unit
 
+SHOPPING_LIST_QUANTITY_PRECISION = 2
+
+
+def round_quantity(quantity: float) -> float:
+    """
+    Rounds a shopping list quantity derived from a recipe to two decimal places, so scaled
+    ingredients such as 1/3 cup x 2 land on 0.67 rather than 0.6666666666666666.
+    """
+    return round(quantity, SHOPPING_LIST_QUANTITY_PRECISION)
+
 
 class ShoppingListService:
     DEFAULT_FOOD_FUZZY_MATCH_THRESHOLD = 80
@@ -370,7 +380,7 @@ class ShoppingListService:
             new_item = ShoppingListItemCreate(
                 shopping_list_id=list_id,
                 note=ingredient.note,
-                quantity=ingredient.quantity * scale if ingredient.quantity else 0,
+                quantity=round_quantity(ingredient.quantity * scale) if ingredient.quantity else 0,
                 food_id=food_id,
                 label_id=label_id,
                 unit_id=unit_id,
@@ -393,7 +403,7 @@ class ShoppingListService:
                 # since this is the same recipe, we combine the quanities, rather than the scales
                 # all items will have exactly one recipe reference
                 if ingredient.quantity:
-                    existing_item.quantity += ingredient.quantity
+                    existing_item.quantity = round_quantity(existing_item.quantity + ingredient.quantity)
                     existing_item.recipe_references[0].recipe_quantity += ingredient.quantity  # type: ignore
 
                 # merge notes

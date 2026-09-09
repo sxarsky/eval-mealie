@@ -41,6 +41,7 @@ from mealie.schema.recipe.recipe import (
     RecipeSummary,
 )
 from mealie.schema.recipe.recipe_asset import RecipeAsset
+from mealie.schema.recipe.recipe_nutrition import RecipeNutritionSummary
 from mealie.schema.recipe.recipe_scraper import ScrapeRecipeTest
 from mealie.schema.recipe.recipe_suggestion import RecipeSuggestionQuery, RecipeSuggestionResponse
 from mealie.schema.recipe.request_helpers import (
@@ -422,6 +423,20 @@ class RecipeController(BaseRecipeController):
             return None
 
         return recipe
+
+    @router.get("/{slug}/nutrition", response_model=RecipeNutritionSummary)
+    def get_nutrition_summary(self, slug: str = Path(..., description="A recipe's slug or id")):
+        """
+        Returns the recipe's nutrition as numbers: totals for the whole recipe and, when the recipe
+        has servings set, the per-serving values.
+        """
+        try:
+            summary = self.service.get_nutrition_summary(slug)
+        except Exception as e:
+            self.handle_exceptions(e)
+            return None
+
+        return summary
 
     @router.post("", status_code=201, response_model=str)
     def create_one(self, data: CreateRecipe) -> str | None:
