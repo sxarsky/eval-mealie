@@ -232,6 +232,7 @@ class RepositoryRecipes(HouseholdRepositoryGeneric[Recipe, RecipeModel]):
         require_all_tools=True,
         require_all_foods=True,
         search: str | None = None,
+        categories_only: bool = False,
     ) -> RecipePagination:
         # Copy this, because calling methods (e.g. tests) might rely on it not getting mutated
         pagination_result = pagination.model_copy()
@@ -264,6 +265,9 @@ class RepositoryRecipes(HouseholdRepositoryGeneric[Recipe, RecipeModel]):
                 require_all_foods=require_all_foods,
             )
             q = q.filter(*filters)
+        if categories_only:
+            # restrict to recipes with a category assignment, independent of any cookbook or category filters
+            q = q.filter(~RecipeModel.recipe_category.any())
         if search:
             q = self.add_search_to_query(q, self.schema, search)
 
