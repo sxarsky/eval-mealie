@@ -1,0 +1,248 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp reject list\"}",
+    "ResponseBody": "{\"id\": \"fc071a2d-2f75-452f-b736-56c3c94ea7a7\", \"name\": \"skyramp reject list\", \"listItems\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:37.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp reject recipe\"}",
+    "ResponseBody": "\"skyramp-reject-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:38.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"471dc1ab-21a9-484f-83b9-cd5ce9efff33\", \"slug\": \"skyramp-reject-recipe\", \"name\": \"skyramp reject recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-reject-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:39.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "[{\"recipeId\": \"471dc1ab-21a9-484f-83b9-cd5ce9efff33\", \"recipeIncrementQuantity\": 1}]",
+    "ResponseBody": "{\"id\": \"fc071a2d-2f75-452f-b736-56c3c94ea7a7\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists/fc071a2d-2f75-452f-b736-56c3c94ea7a7/recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:40.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "[{\"recipeId\": \"471dc1ab-21a9-484f-83b9-cd5ce9efff33\", \"recipeIncrementQuantity\": 1}]",
+    "ResponseBody": "{\"detail\": {\"message\": \"No Entry Found\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists/268f4955-1cb2-4104-9a9d-53a068491213/recipe",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:41.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "[{\"recipeId\": \"0ce997a8-f359-4e2e-9b06-f525fee399cd\", \"recipeIncrementQuantity\": 1}]",
+    "ResponseBody": "{\"detail\": {\"message\": \"No Entry Found\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists/fc071a2d-2f75-452f-b736-56c3c94ea7a7/recipe",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:42.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"fc071a2d-2f75-452f-b736-56c3c94ea7a7\", \"listItems\": [{\"note\": \"1 Cup Flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/households/shopping/lists/fc071a2d-2f75-452f-b736-56c3c94ea7a7",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:43.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-reject-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:44.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/households/shopping/lists/fc071a2d-2f75-452f-b736-56c3c94ea7a7",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:45.389Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_add_recipe_rejects_unknown_ids"
+  }
+]

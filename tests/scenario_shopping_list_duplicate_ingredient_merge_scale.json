@@ -1,0 +1,278 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp merge food\"}",
+    "ResponseBody": "{\"id\": \"defb939a-93ee-4c8c-9d6c-31ef74c57cbd\", \"name\": \"skyramp merge food\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/foods",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:22.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp merge recipe\"}",
+    "ResponseBody": "\"skyramp-merge-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:23.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"8bf5b819-a9b8-443d-9e06-1d90e8290d13\", \"slug\": \"skyramp-merge-recipe\", \"name\": \"skyramp merge recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-merge-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:24.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"slug\": \"skyramp-merge-recipe\", \"recipeIngredient\": [{\"quantity\": 0.5, \"note\": \"first\", \"food\": {\"id\": \"defb939a-93ee-4c8c-9d6c-31ef74c57cbd\", \"name\": \"skyramp merge food\"}}, {\"quantity\": 0.5, \"note\": \"second\", \"food\": {\"id\": \"defb939a-93ee-4c8c-9d6c-31ef74c57cbd\", \"name\": \"skyramp merge food\"}}]}",
+    "ResponseBody": "{\"slug\": \"skyramp-merge-recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-merge-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:25.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp merge list\"}",
+    "ResponseBody": "{\"id\": \"8d7d77f0-0a91-4c33-b868-ad6fe7cd2427\", \"name\": \"skyramp merge list\", \"listItems\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:26.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "[{\"recipeId\": \"8bf5b819-a9b8-443d-9e06-1d90e8290d13\", \"recipeIncrementQuantity\": 2}]",
+    "ResponseBody": "{\"id\": \"8d7d77f0-0a91-4c33-b868-ad6fe7cd2427\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists/8d7d77f0-0a91-4c33-b868-ad6fe7cd2427/recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:27.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"8d7d77f0-0a91-4c33-b868-ad6fe7cd2427\", \"listItems\": [{\"quantity\": 2.0, \"foodId\": \"defb939a-93ee-4c8c-9d6c-31ef74c57cbd\", \"recipeReferences\": [{\"recipeQuantity\": 1.0, \"recipeScale\": 2}]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/households/shopping/lists/8d7d77f0-0a91-4c33-b868-ad6fe7cd2427",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:28.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/households/shopping/lists/8d7d77f0-0a91-4c33-b868-ad6fe7cd2427",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:29.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-merge-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:30.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/foods/defb939a-93ee-4c8c-9d6c-31ef74c57cbd",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:31.955Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_duplicate_ingredient_merge_scale"
+  }
+]
