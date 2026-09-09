@@ -1,0 +1,299 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"scale-factor-recipe\"}",
+    "ResponseBody": "\"scale-factor-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:21.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeIngredient\": [{\"quantity\": 2, \"note\": \"eggs\", \"display\": \"\"}]}",
+    "ResponseBody": "{\"slug\": \"scale-factor-recipe\", \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"eggs\", \"display\": \"2 eggs\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/scale-factor-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:22.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-factor-recipe\", \"recipeIngredient\": [{\"quantity\": 4.0, \"note\": \"eggs\", \"display\": \"4 eggs\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-factor-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "2"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:23.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-factor-recipe\", \"recipeIngredient\": [{\"quantity\": 1.0, \"note\": \"eggs\", \"display\": \"1 eggs\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-factor-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "0.5"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:24.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-factor-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "0"
+      ]
+    },
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:25.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-factor-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "-1"
+      ]
+    },
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:26.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-factor-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "abc"
+      ]
+    },
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:27.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-factor-recipe/scale",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:28.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-factor-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "1e308"
+      ]
+    },
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:29.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/scale-factor-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:30.548Z",
+    "Scheme": "http",
+    "scenarioName": "scale-factor-validation-boundaries"
+  }
+]

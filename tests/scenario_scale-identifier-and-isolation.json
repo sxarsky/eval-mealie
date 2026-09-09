@@ -1,0 +1,237 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"scale-ident-recipe\"}",
+    "ResponseBody": "\"scale-ident-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:39.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\": 4, \"recipeYieldQuantity\": 2, \"recipeIngredient\": [{\"quantity\": 2, \"note\": \"eggs\", \"display\": \"\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"\"}]}",
+    "ResponseBody": "{\"id\": \"8c1d4e7a-5b93-4f26-9a08-3d6172ef54bc\", \"slug\": \"scale-ident-recipe\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"eggs\", \"display\": \"2 eggs\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/scale-ident-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:40.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-ident-recipe\", \"recipeIngredient\": [{\"quantity\": 6.0, \"note\": \"eggs\", \"display\": \"6 eggs\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-ident-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "3"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:41.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-ident-recipe\", \"recipeIngredient\": [{\"quantity\": 6.0, \"note\": \"eggs\", \"display\": \"6 eggs\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/8c1d4e7a-5b93-4f26-9a08-3d6172ef54bc/scale",
+    "QueryParams": {
+      "factor": [
+        "3"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:42.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/does-not-exist-xyz123/scale",
+    "QueryParams": {
+      "factor": [
+        "3"
+      ]
+    },
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:43.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/3f2b1a5c-9d4e-4c7b-8a61-2e5f7c0d1b93/scale",
+    "QueryParams": {
+      "factor": [
+        "3"
+      ]
+    },
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:44.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-ident-recipe\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"eggs\", \"display\": \"2 eggs\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-ident-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:45.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/scale-ident-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:46.196Z",
+    "Scheme": "http",
+    "scenarioName": "scale-identifier-and-isolation"
+  }
+]
