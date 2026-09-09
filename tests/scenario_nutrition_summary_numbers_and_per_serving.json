@@ -1,0 +1,248 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp nutrition summary\"}",
+    "ResponseBody": "\"skyramp-nutrition-summary\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:49.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"3b307c1a-9b0e-438b-867f-a0289f02e8e8\", \"slug\": \"skyramp-nutrition-summary\", \"name\": \"skyramp nutrition summary\", \"recipeServings\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-nutrition-summary",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:50.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"slug\": \"skyramp-nutrition-summary\", \"recipeServings\": 3, \"nutrition\": {\"calories\": \"480 kcal\", \"proteinContent\": \"22 g\", \"fatContent\": \"12.5g\", \"sodiumContent\": \"800 mg\"}}",
+    "ResponseBody": "{\"id\": \"3b307c1a-9b0e-438b-867f-a0289f02e8e8\", \"slug\": \"skyramp-nutrition-summary\", \"recipeServings\": 3}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-nutrition-summary",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:51.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"recipeId\": \"3b307c1a-9b0e-438b-867f-a0289f02e8e8\", \"slug\": \"skyramp-nutrition-summary\", \"servings\": 3, \"hasNutrition\": true, \"total\": {\"calories\": 480, \"proteinContent\": 22, \"fatContent\": 12.5, \"sodiumContent\": 800, \"sugarContent\": null}, \"perServing\": {\"calories\": 160, \"proteinContent\": 7.33, \"fatContent\": 4.17, \"sodiumContent\": 266.67, \"sugarContent\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-nutrition-summary/nutrition",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:52.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"recipeId\": \"3b307c1a-9b0e-438b-867f-a0289f02e8e8\", \"slug\": \"skyramp-nutrition-summary\", \"servings\": 3, \"hasNutrition\": true, \"total\": {\"calories\": 480, \"proteinContent\": 22, \"fatContent\": 12.5, \"sodiumContent\": 800}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/3b307c1a-9b0e-438b-867f-a0289f02e8e8/nutrition",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:53.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"slug\": \"skyramp-nutrition-summary\", \"recipeServings\": 0}",
+    "ResponseBody": "{\"slug\": \"skyramp-nutrition-summary\", \"recipeServings\": 0}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-nutrition-summary",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:54.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-nutrition-summary\", \"servings\": 0, \"hasNutrition\": true, \"total\": {\"calories\": 480}, \"perServing\": null}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-nutrition-summary/nutrition",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:55.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"No Entry Found\"}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-no-such-recipe/nutrition",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:56.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-nutrition-summary",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:28:57.429Z",
+    "Scheme": "http",
+    "scenarioName": "nutrition_summary_numbers_and_per_serving"
+  }
+]

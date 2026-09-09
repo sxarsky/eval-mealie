@@ -1,0 +1,275 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp rounding list\"}",
+    "ResponseBody": "{\"id\": \"ffe766c7-4b0f-4ef1-8ad1-adcca167e080\", \"name\": \"skyramp rounding list\", \"listItems\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:06.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"skyramp rounding recipe\"}",
+    "ResponseBody": "\"skyramp-rounding-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:07.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"dcc07098-fe79-4145-9561-dc32649d6d14\", \"slug\": \"skyramp-rounding-recipe\", \"name\": \"skyramp rounding recipe\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-rounding-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:08.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"slug\": \"skyramp-rounding-recipe\", \"recipeIngredient\": [{\"quantity\": 0.333, \"note\": \"skyramp scaled flour\"}]}",
+    "ResponseBody": "{\"slug\": \"skyramp-rounding-recipe\", \"recipeIngredient\": [{\"quantity\": 0.333, \"note\": \"skyramp scaled flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-rounding-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:09.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "[{\"recipeId\": \"dcc07098-fe79-4145-9561-dc32649d6d14\", \"recipeIncrementQuantity\": 2}]",
+    "ResponseBody": "{\"id\": \"ffe766c7-4b0f-4ef1-8ad1-adcca167e080\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists/ffe766c7-4b0f-4ef1-8ad1-adcca167e080/recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:10.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"ffe766c7-4b0f-4ef1-8ad1-adcca167e080\", \"listItems\": [{\"quantity\": 0.67, \"note\": \"skyramp scaled flour\", \"recipeReferences\": [{\"recipeId\": \"dcc07098-fe79-4145-9561-dc32649d6d14\", \"recipeQuantity\": 0.333, \"recipeScale\": 2}]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/households/shopping/lists/ffe766c7-4b0f-4ef1-8ad1-adcca167e080",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:11.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeDecrementQuantity\": 2}",
+    "ResponseBody": "{\"id\": \"ffe766c7-4b0f-4ef1-8ad1-adcca167e080\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/households/shopping/lists/ffe766c7-4b0f-4ef1-8ad1-adcca167e080/recipe/dcc07098-fe79-4145-9561-dc32649d6d14/delete",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:12.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"ffe766c7-4b0f-4ef1-8ad1-adcca167e080\", \"listItems\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/households/shopping/lists/ffe766c7-4b0f-4ef1-8ad1-adcca167e080",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:13.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-rounding-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:14.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/households/shopping/lists/ffe766c7-4b0f-4ef1-8ad1-adcca167e080",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T04:29:15.368Z",
+    "Scheme": "http",
+    "scenarioName": "shopping_list_recipe_quantity_rounding_then_removal"
+  }
+]
