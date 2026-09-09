@@ -1,0 +1,292 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"catonly-cat-8f3a\"}",
+    "ResponseBody": "{\"id\": \"0d9646de-22c4-4e5f-9176-21674e3805ed\", \"name\": \"catonly-cat-8f3a\", \"slug\": \"catonly-cat-8f3a\", \"groupId\": \"bfb4a555-2bda-44e9-aa5e-582fa61dd6fc\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/organizers/categories",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:43.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"catonly-plain-8f3a\"}",
+    "ResponseBody": "\"catonly-plain-8f3a\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:44.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"catonly-filed-8f3a\"}",
+    "ResponseBody": "\"catonly-filed-8f3a\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:45.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"ca1e5246-122b-46ab-af13-100deaf5a924\", \"name\": \"catonly-filed-8f3a\", \"slug\": \"catonly-filed-8f3a\", \"recipeCategory\": [], \"tags\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/catonly-filed-8f3a",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:46.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"id\": \"ca1e5246-122b-46ab-af13-100deaf5a924\", \"name\": \"catonly-filed-8f3a\", \"slug\": \"catonly-filed-8f3a\", \"recipeCategory\": [{\"id\": \"0d9646de-22c4-4e5f-9176-21674e3805ed\", \"name\": \"catonly-cat-8f3a\", \"slug\": \"catonly-cat-8f3a\"}]}",
+    "ResponseBody": "{\"id\": \"ca1e5246-122b-46ab-af13-100deaf5a924\", \"name\": \"catonly-filed-8f3a\", \"slug\": \"catonly-filed-8f3a\", \"recipeCategory\": [{\"id\": \"0d9646de-22c4-4e5f-9176-21674e3805ed\", \"name\": \"catonly-cat-8f3a\", \"slug\": \"catonly-cat-8f3a\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/recipes/catonly-filed-8f3a",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:47.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 100, \"total\": 1, \"total_pages\": 1, \"items\": [{\"id\": \"ca1e5246-122b-46ab-af13-100deaf5a924\", \"name\": \"catonly-filed-8f3a\", \"slug\": \"catonly-filed-8f3a\", \"recipeCategory\": [{\"id\": \"0d9646de-22c4-4e5f-9176-21674e3805ed\", \"name\": \"catonly-cat-8f3a\", \"slug\": \"catonly-cat-8f3a\"}]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "categories_only": [
+        "true"
+      ],
+      "perPage": [
+        "100"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:48.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 100, \"total\": 2, \"total_pages\": 1, \"items\": [{\"id\": \"ca1e5246-122b-46ab-af13-100deaf5a924\", \"name\": \"catonly-filed-8f3a\", \"slug\": \"catonly-filed-8f3a\"}, {\"id\": \"28697660-831f-407b-b102-20739df7ad0b\", \"name\": \"catonly-plain-8f3a\", \"slug\": \"catonly-plain-8f3a\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "perPage": [
+        "100"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:49.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"ca1e5246-122b-46ab-af13-100deaf5a924\", \"slug\": \"catonly-filed-8f3a\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/catonly-filed-8f3a",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:50.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"28697660-831f-407b-b102-20739df7ad0b\", \"slug\": \"catonly-plain-8f3a\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/catonly-plain-8f3a",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:51.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"0d9646de-22c4-4e5f-9176-21674e3805ed\", \"name\": \"catonly-cat-8f3a\", \"slug\": \"catonly-cat-8f3a\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/organizers/categories/0d9646de-22c4-4e5f-9176-21674e3805ed",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:41:52.596Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_categories_only_returns_categorized"
+  }
+]

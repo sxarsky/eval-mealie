@@ -1,0 +1,171 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"orphan-guard-4d19\"}",
+    "ResponseBody": "\"orphan-guard-4d19\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:51:48.490Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_partial_update_must_not_orphan",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"b41f7c05-2e9a-4d63-8517-cf0e2a9b36d4\", \"name\": \"orphan-guard-4d19\", \"slug\": \"orphan-guard-4d19\", \"recipeCategory\": [], \"tags\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/orphan-guard-4d19",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:51:49.490Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_partial_update_must_not_orphan"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"id\": \"b41f7c05-2e9a-4d63-8517-cf0e2a9b36d4\", \"name\": \"orphan-guard-4d19\", \"slug\": \"orphan-guard-4d19\", \"recipeCategory\": []}",
+    "ResponseBody": "{\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"groupId\"], \"msg\": \"Field required\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PUT",
+    "Path": "/api/recipes/orphan-guard-4d19",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:51:50.490Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_partial_update_must_not_orphan"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"b41f7c05-2e9a-4d63-8517-cf0e2a9b36d4\", \"name\": \"orphan-guard-4d19\", \"slug\": \"orphan-guard-4d19\", \"recipeCategory\": [], \"tags\": []}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/orphan-guard-4d19",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:51:51.490Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_partial_update_must_not_orphan"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"page\": 1, \"per_page\": 100, \"total\": 1, \"total_pages\": 1, \"items\": [{\"id\": \"b41f7c05-2e9a-4d63-8517-cf0e2a9b36d4\", \"name\": \"orphan-guard-4d19\", \"slug\": \"orphan-guard-4d19\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes",
+    "QueryParams": {
+      "perPage": [
+        "100"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:51:52.490Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_partial_update_must_not_orphan"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"b41f7c05-2e9a-4d63-8517-cf0e2a9b36d4\", \"slug\": \"orphan-guard-4d19\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/orphan-guard-4d19",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:51:53.490Z",
+    "Scheme": "http",
+    "scenarioName": "recipes_partial_update_must_not_orphan"
+  }
+]
