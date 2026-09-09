@@ -512,6 +512,11 @@ def recipes_slug_assets(slug):
     return f"{prefix}/recipes/{slug}/assets"
 
 
+def recipes_slug_scale(slug):
+    """`/api/recipes/{slug}/scale`"""
+    return f"{prefix}/recipes/{slug}/scale"
+
+
 def recipes_slug_comments(slug):
     """`/api/recipes/{slug}/comments`"""
     return f"{prefix}/recipes/{slug}/comments"

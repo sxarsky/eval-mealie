@@ -40,6 +40,28 @@ from .template_service import TemplateService
 RECIPE_CREATED_EVENT_SUBJECT = "recipe.recipe-created"
 
 
+def scale_recipe(recipe: Recipe, factor: float) -> Recipe:
+    """
+    Returns a copy of the recipe scaled by ``factor``: ingredient quantities and the recipe
+    yield are multiplied, and each ingredient's display text is rebuilt from the scaled quantity.
+
+    The original recipe is not mutated and nothing is persisted. Ingredients without a
+    quantity (e.g. "to taste") are left untouched.
+    """
+
+    scaled = recipe.model_copy(deep=True)
+
+    for ingredient in scaled.recipe_ingredient:
+        if ingredient.quantity is None:
+            continue
+
+        ingredient.quantity = ingredient.quantity * factor
+        ingredient.display = ""
+        ingredient.display = ingredient._format_display()
+
+    return scaled
+
+
 class RecipeServiceBase(BaseService):
     def __init__(self, repos: AllRepositories, user: PrivateUser, household: HouseholdInDB, translator: Translator):
         self.repos = repos
@@ -198,6 +220,10 @@ class RecipeService(RecipeServiceBase):
 
         else:
             return self._get_recipe(slug_or_id, "slug")
+
+    def get_one_scaled(self, slug_or_id: str | UUID, factor: float) -> Recipe:
+        """Fetches a recipe and returns a scaled copy; the stored recipe is unchanged"""
+        return scale_recipe(self.get_one(slug_or_id), factor)
 
     def create_one(self, create_data: Recipe | CreateRecipe) -> Recipe:
         if create_data.name is None:

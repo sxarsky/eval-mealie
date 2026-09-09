@@ -423,6 +423,24 @@ class RecipeController(BaseRecipeController):
 
         return recipe
 
+    @router.get("/{slug}/scale", response_model=Recipe)
+    def get_one_scaled(
+        self,
+        slug: str = Path(..., description="A recipe's slug or id"),
+        factor: float = Query(..., gt=0, description="Multiplier applied to the recipe, e.g. 2 doubles it"),
+    ):
+        """
+        Returns the recipe scaled by the given factor. Ingredient quantities and the recipe yield are
+        multiplied by the factor and ingredient display text is regenerated; the stored recipe is not modified.
+        """
+        try:
+            recipe = self.service.get_one_scaled(slug, factor)
+        except Exception as e:
+            self.handle_exceptions(e)
+            return None
+
+        return recipe
+
     @router.post("", status_code=201, response_model=str)
     def create_one(self, data: CreateRecipe) -> str | None:
         """Takes in a JSON string and loads data into the database as a new entry"""
