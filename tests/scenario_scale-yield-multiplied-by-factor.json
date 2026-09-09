@@ -1,0 +1,117 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"scale-yield-recipe\"}",
+    "ResponseBody": "\"scale-yield-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:06.702Z",
+    "Scheme": "http",
+    "scenarioName": "scale-yield-multiplied-by-factor",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\": 4, \"recipeYieldQuantity\": 2, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2, \"note\": \"eggs\", \"display\": \"\"}]}",
+    "ResponseBody": "{\"slug\": \"scale-yield-recipe\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"eggs\", \"display\": \"2 eggs\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/scale-yield-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:07.702Z",
+    "Scheme": "http",
+    "scenarioName": "scale-yield-multiplied-by-factor"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"scale-yield-recipe\", \"recipeServings\": 8.0, \"recipeYieldQuantity\": 4.0, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 4.0, \"note\": \"eggs\", \"display\": \"4 eggs\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/scale-yield-recipe/scale",
+    "QueryParams": {
+      "factor": [
+        "2"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:08.702Z",
+    "Scheme": "http",
+    "scenarioName": "scale-yield-multiplied-by-factor"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/scale-yield-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-09T03:52:09.702Z",
+    "Scheme": "http",
+    "scenarioName": "scale-yield-multiplied-by-factor"
+  }
+]
