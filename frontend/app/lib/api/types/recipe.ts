@@ -285,6 +285,27 @@ export interface RecipeNote {
   title: string;
   text: string;
 }
+export interface NutritionValues {
+  calories?: number | null;
+  carbohydrateContent?: number | null;
+  cholesterolContent?: number | null;
+  fatContent?: number | null;
+  fiberContent?: number | null;
+  proteinContent?: number | null;
+  saturatedFatContent?: number | null;
+  sodiumContent?: number | null;
+  sugarContent?: number | null;
+  transFatContent?: number | null;
+  unsaturatedFatContent?: number | null;
+}
+export interface RecipeNutritionSummary {
+  recipeId: string;
+  slug: string;
+  servings: number;
+  hasNutrition: boolean;
+  total: NutritionValues;
+  perServing?: NutritionValues | null;
+}
 export interface RecipeCommentOut {
   recipeId: string;
   text: string;

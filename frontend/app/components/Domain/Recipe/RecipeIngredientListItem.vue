@@ -35,13 +35,20 @@
 <script setup lang="ts">
 import type { RecipeIngredient } from "~/lib/api/types/household";
 import { useIngredientTextParser } from "~/composables/recipes";
+import { formatShoppingListQuantity } from "~/composables/shopping-list-page/use-shopping-list-quantity";
 
 interface Props {
   ingredient: RecipeIngredient;
   scale?: number;
+  /**
+   * Render the quantity as a decimal rounded to two places (e.g. "0.67") instead of a fraction.
+   * Used by the shopping list, where quantities are stored at that precision.
+   */
+  decimalQuantity?: boolean;
 }
 const props = withDefaults(defineProps<Props>(), {
   scale: 1,
+  decimalQuantity: false,
 });
 const route = useRoute();
 const auth = useMealieAuth();
@@ -49,7 +56,11 @@ const groupSlug = computed(() => route.params.groupSlug || auth.user?.value?.gro
 const { useParsedIngredientText } = useIngredientTextParser();
 
 const parsedIng = computed(() => {
-  return useParsedIngredientText(props.ingredient, props.scale, true, groupSlug.value.toString());
+  const parsed = useParsedIngredientText(props.ingredient, props.scale, true, groupSlug.value.toString());
+  if (props.decimalQuantity && parsed.quantity) {
+    parsed.quantity = formatShoppingListQuantity((props.ingredient.quantity || 0) * props.scale);
+  }
+  return parsed;
 });
 </script>
 

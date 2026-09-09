@@ -527,6 +527,11 @@ def recipes_slug_exports(slug):
     return f"{prefix}/recipes/{slug}/exports"
 
 
+def recipes_slug_nutrition(slug):
+    """`/api/recipes/{slug}/nutrition`"""
+    return f"{prefix}/recipes/{slug}/nutrition"
+
+
 def recipes_slug_image(slug):
     """`/api/recipes/{slug}/image`"""
     return f"{prefix}/recipes/{slug}/image"

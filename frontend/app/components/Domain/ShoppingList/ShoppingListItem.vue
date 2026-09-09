@@ -31,7 +31,10 @@
               :class="listItem.checked ? 'strike-through' : ''"
               style="min-width: 0;"
             >
-              <RecipeIngredientListItem :ingredient="listItem" />
+              <RecipeIngredientListItem
+                :ingredient="listItem"
+                decimal-quantity
+              />
             </div>
           </div>
         </v-col>

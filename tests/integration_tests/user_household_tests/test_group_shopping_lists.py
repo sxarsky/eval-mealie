@@ -776,7 +776,7 @@ def test_shopping_list_add_recipe_scale(
         # scale was unspecified, which defaults to 1
         assert refs[0]["recipeScale"] == 1
 
-    recipe_scale = round(random.uniform(1, 10), 5)
+    recipe_scale = round(random.uniform(1, 10), 2)
     payload = utils.jsonify(
         [ShoppingListAddRecipeParamsBulk(recipe_id=recipe.id, recipe_increment_quantity=recipe_scale).model_dump()]
     )
