@@ -1,0 +1,167 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Global Recipe\"}",
+    "ResponseBody": "\"skyramp-global-recipe\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T20:54:59.699Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-get-by-id",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"3f1c9d84-7a62-4e15-b0c8-5d29e7a41b36\", \"name\": \"Skyramp Global Recipe\", \"slug\": \"skyramp-global-recipe\", \"groupId\": \"2a83665d-c7ae-482a-bab6-71615df102ac\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-global-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T20:55:00.699Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-get-by-id"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"id\": \"3f1c9d84-7a62-4e15-b0c8-5d29e7a41b36\", \"name\": \"Skyramp Global Recipe\", \"slug\": \"skyramp-global-recipe\", \"groupId\": \"2a83665d-c7ae-482a-bab6-71615df102ac\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/3f1c9d84-7a62-4e15-b0c8-5d29e7a41b36",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T20:55:01.699Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-get-by-id"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"Recipe not found\", \"error\": true, \"exception\": null}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/1e5c8f2a-3b7d-4c6e-9a81-2f4b6d8e0a13",
+    "QueryParams": {},
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T20:55:02.699Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-get-by-id"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/global/not-a-uuid",
+    "QueryParams": {},
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T20:55:03.699Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-get-by-id"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-global-recipe",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T20:55:04.699Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-global-get-by-id"
+  }
+]
