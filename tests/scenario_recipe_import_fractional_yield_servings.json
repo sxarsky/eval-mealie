@@ -1,0 +1,164 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"data\": \"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Recipe\\\",\\\"name\\\":\\\"skyramp whole yield control\\\",\\\"recipeYield\\\":\\\"4 servings\\\",\\\"recipeIngredient\\\":[\\\"1 cup flour\\\"],\\\"recipeInstructions\\\":[{\\\"@type\\\":\\\"HowToStep\\\",\\\"text\\\":\\\"Mix\\\"}]}\", \"includeTags\": false}",
+    "ResponseBody": "\"skyramp-whole-yield-control\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes/create/html-or-json",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:09:22.397Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_import_fractional_yield_servings"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-whole-yield-control\", \"name\": \"skyramp whole yield control\", \"recipeServings\": 4, \"recipeYieldQuantity\": 0.0, \"recipeYield\": \"\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-whole-yield-control",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:09:23.397Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_import_fractional_yield_servings"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-whole-yield-control\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-whole-yield-control",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:09:24.397Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_import_fractional_yield_servings"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"data\": \"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Recipe\\\",\\\"name\\\":\\\"skyramp frac yield subject\\\",\\\"recipeYield\\\":\\\"2.5 servings\\\",\\\"recipeIngredient\\\":[\\\"1 cup flour\\\"],\\\"recipeInstructions\\\":[{\\\"@type\\\":\\\"HowToStep\\\",\\\"text\\\":\\\"Mix\\\"}]}\", \"includeTags\": false}",
+    "ResponseBody": "\"skyramp-frac-yield-subject\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes/create/html-or-json",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:09:25.397Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_import_fractional_yield_servings"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-frac-yield-subject\", \"name\": \"skyramp frac yield subject\", \"recipeServings\": 2, \"recipeYieldQuantity\": 0.0, \"recipeYield\": \"\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-frac-yield-subject",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:09:26.397Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_import_fractional_yield_servings"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-frac-yield-subject\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-frac-yield-subject",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:09:27.397Z",
+    "Scheme": "http",
+    "scenarioName": "recipe_import_fractional_yield_servings"
+  }
+]
