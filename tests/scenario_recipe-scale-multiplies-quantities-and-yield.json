@@ -1,0 +1,202 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Scale Math 0001\"}",
+    "ResponseBody": "\"skyramp-scale-math-0001\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:48.273Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-multiplies-quantities-and-yield",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\": 4, \"recipeYieldQuantity\": 2, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2, \"unit\": null, \"food\": null, \"note\": \"flour\", \"display\": \"\"}, {\"quantity\": null, \"unit\": null, \"food\": null, \"note\": \"salt to taste\", \"display\": \"\"}]}",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-math-0001\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"flour\", \"display\": \"2 flour\"}, {\"quantity\": null, \"note\": \"salt to taste\", \"display\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-scale-math-0001",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:49.273Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-multiplies-quantities-and-yield"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-math-0001\", \"recipeServings\": 8.0, \"recipeYieldQuantity\": 4.0, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 4.0, \"note\": \"flour\"}, {\"quantity\": null, \"note\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-math-0001/scale",
+    "QueryParams": {
+      "scale": [
+        "2"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:50.273Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-multiplies-quantities-and-yield"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-math-0001\", \"recipeServings\": 2.0, \"recipeYieldQuantity\": 1.0, \"recipeIngredient\": [{\"quantity\": 1.0, \"note\": \"flour\"}, {\"quantity\": null, \"note\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-math-0001/scale",
+    "QueryParams": {
+      "scale": [
+        "0.5"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:51.273Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-multiplies-quantities-and-yield"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-math-0001\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"flour\"}, {\"quantity\": null, \"note\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-math-0001/scale",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:52.273Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-multiplies-quantities-and-yield"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-math-0001\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"flour\"}, {\"quantity\": null, \"note\": \"salt to taste\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-math-0001",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:53.273Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-multiplies-quantities-and-yield"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-math-0001\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-scale-math-0001",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:54.273Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-multiplies-quantities-and-yield"
+  }
+]

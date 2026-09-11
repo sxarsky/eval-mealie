@@ -1,0 +1,117 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Scale Display 0001\"}",
+    "ResponseBody": "\"skyramp-scale-display-0001\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:56.129Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-matches-scaled-quantity",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"recipeServings\": 4, \"recipeYieldQuantity\": 2, \"recipeYield\": \"loaves\", \"recipeIngredient\": [{\"quantity\": 2, \"unit\": null, \"food\": null, \"note\": \"flour\", \"display\": \"\"}]}",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-display-0001\", \"recipeServings\": 4.0, \"recipeYieldQuantity\": 2.0, \"recipeIngredient\": [{\"quantity\": 2.0, \"note\": \"flour\", \"display\": \"2 flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "PATCH",
+    "Path": "/api/recipes/skyramp-scale-display-0001",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:57.129Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-matches-scaled-quantity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-display-0001\", \"recipeServings\": 8.0, \"recipeYieldQuantity\": 4.0, \"recipeIngredient\": [{\"quantity\": 4.0, \"note\": \"flour\", \"display\": \"4 flour\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-display-0001/scale",
+    "QueryParams": {
+      "scale": [
+        "2"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:58.129Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-matches-scaled-quantity"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-display-0001\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-scale-display-0001",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:14:59.129Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-ingredient-display-matches-scaled-quantity"
+  }
+]

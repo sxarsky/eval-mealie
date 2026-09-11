@@ -1,0 +1,214 @@
+[
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "{\"name\": \"Skyramp Scale Validation 0001\"}",
+    "ResponseBody": "\"skyramp-scale-validation-0001\"",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "POST",
+    "Path": "/api/recipes",
+    "QueryParams": {},
+    "StatusCode": 201,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:15:04.916Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-rejects-non-positive-scale",
+    "UniqueFields": [
+      "name"
+    ]
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-validation-0001\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-validation-0001/scale",
+    "QueryParams": {
+      "scale": [
+        "2"
+      ]
+    },
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:15:05.916Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-rejects-non-positive-scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": [{\"type\": \"greater_than\", \"loc\": [\"query\", \"scale\"], \"msg\": \"Input should be greater than 0\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-validation-0001/scale",
+    "QueryParams": {
+      "scale": [
+        "0"
+      ]
+    },
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:15:06.916Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-rejects-non-positive-scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": [{\"type\": \"greater_than\", \"loc\": [\"query\", \"scale\"], \"msg\": \"Input should be greater than 0\"}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-validation-0001/scale",
+    "QueryParams": {
+      "scale": [
+        "-1"
+      ]
+    },
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:15:07.916Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-rejects-non-positive-scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": [{\"type\": \"float_parsing\", \"loc\": [\"query\", \"scale\"]}]}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-scale-validation-0001/scale",
+    "QueryParams": {
+      "scale": [
+        "abc"
+      ]
+    },
+    "StatusCode": 422,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:15:08.916Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-rejects-non-positive-scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"detail\": {\"message\": \"No Entry Found\", \"error\": true}}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "GET",
+    "Path": "/api/recipes/skyramp-no-such-recipe/scale",
+    "QueryParams": {
+      "scale": [
+        "2"
+      ]
+    },
+    "StatusCode": 404,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:15:09.916Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-rejects-non-positive-scale"
+  },
+  {
+    "Source": "192.168.65.1:39998",
+    "Destination": "localhost",
+    "RequestBody": "",
+    "ResponseBody": "{\"slug\": \"skyramp-scale-validation-0001\"}",
+    "RequestHeaders": {
+      "Content-Type": [
+        "application/json"
+      ],
+      "Authorization": [
+        "Bearer SKYRAMP_PLACEHOLDER_TOKEN"
+      ]
+    },
+    "ResponseHeaders": {
+      "Content-Type": [
+        "application/json"
+      ]
+    },
+    "Method": "DELETE",
+    "Path": "/api/recipes/skyramp-scale-validation-0001",
+    "QueryParams": {},
+    "StatusCode": 200,
+    "Port": 9000,
+    "Timestamp": "2026-09-11T21:15:10.916Z",
+    "Scheme": "http",
+    "scenarioName": "recipe-scale-rejects-non-positive-scale"
+  }
+]
