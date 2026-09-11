@@ -34,6 +34,8 @@
             variant="underlined"
             auto-grow
             :placeholder="$t('recipe.note')"
+            :counter="NOTE_TEXT_MAX_LENGTH"
+            :maxlength="NOTE_TEXT_MAX_LENGTH"
           />
         </v-card-text>
       </v-card>
@@ -63,6 +65,8 @@
 
 <script setup lang="ts">
 import type { RecipeNote } from "~/lib/api/types/recipe";
+
+const NOTE_TEXT_MAX_LENGTH = 255;
 
 const model = defineModel<RecipeNote[]>({ default: () => [] });
 
